@@ -1,1 +1,1 @@
-This is a sign up app for youth sports leagues to have online sign up forms that save to a database. It will use Bootstrap, Express, Mongoose and Mongo.
+This is an app built using Angular and Bootstrap. It is an online sign up for youth sports leagues and teams. 
