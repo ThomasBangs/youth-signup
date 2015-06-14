@@ -1,20 +1,19 @@
 var app = angular.module("sportsSignUpApp", ["ngRoute"]);
 
-//routes for partials
-/*
+
+
 app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'partials/',
+        templateUrl: 'partials/home',
         controller: ''
       }).
-      when('/', {
-        templateUrl: 'partials/',
+      when('/about', {
+        templateUrl: 'partials/about',
         controller: ''
       }).
       otherwise({
         redirectTo: '/'
       });
   }]);
-*/
