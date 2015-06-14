@@ -13,6 +13,10 @@ app.config(['$routeProvider',
         templateUrl: 'partials/about.html ',
         controller: ''
       }).
+      when('/player-registration', {
+        templateUrl: 'partials/playerRegistration.html',
+        controller: ''
+      }).
       otherwise({
         redirectTo: '/'
       });
