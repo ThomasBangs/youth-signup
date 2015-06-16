@@ -7,19 +7,21 @@
     <div class="col-sm-6">
       <h2 class="text-center"> {{ date | date: "yyyy"}} Football and Cheerleading Registration Form </h2>
       <!-- add checkboxes for cheer football -->
-      <label id="footballCheckbox">
-        <input type="checkbox">  Football 
-      </label>
-      <label>
-        <input type="checkbox" >  Cheerleading
-      </label>
+      <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default">Football</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default">Cheerleading</button>
+        </div>
+      </div>
 
     </div>
   </div>
 </div>
 <!--Begins main form -->
-<form class="form-inline">
-  <div class="form-group">
+<form class="">
+  <div class="form-group row">
     <div class="col-sm-5">
       <label class="sr-only" for="childsName">Child's Name: As On Birth Certificate</label>
         <input type="text" class="form-control" id="childsName" placeholder="Child's Name:As On Birth Certificate" >
