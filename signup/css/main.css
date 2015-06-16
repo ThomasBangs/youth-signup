@@ -1,19 +1,36 @@
-#footballCheckbox {
-  margin-right: 25px;
+.form-control {
+  width: 75%;
+  margin:0 auto;
 }
 
-#childsName {
-  width:100%;
+/* style the placeholder in inputs */
+::-webkit-input-placeholder {
+ font-size: 10px;
+ color: #d0cdfa;
+ text-transform: uppercase;
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
 }
-
-#dateOfBirth {
-  width: 100%;
+:-moz-placeholder { /* older Firefox*/
+ font-size:10px;
+ color: #d0cdfa;
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
 }
-
-#ageOnJuly31 {
-  width:100%;
+::-moz-placeholder { /* Firefox 19+ */ 
+ font-size: 10px;
+ color: #d0cdfa; 
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
+} 
+:-ms-input-placeholder { 
+ font-size: 10px; 
+ color: #d0cdfa;
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
 }
-
-#male-female {
-  
-}
+ 
