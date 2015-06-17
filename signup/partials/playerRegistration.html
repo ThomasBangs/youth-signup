@@ -9,7 +9,7 @@
       <!-- add checkboxes for cheer football -->
       <div class="btn-group btn-group-justified" role="group" aria-label="...">
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default" id='footballSelect'>Football</button>
+          <button type="button" autofocus class="btn btn-default" id='footballSelect' required>Football</button>
         </div>
         <div class="btn-group" role="group">
           <button type="button" class="btn btn-default" id="cheerSelect" required>Cheerleading</button>
@@ -32,24 +32,24 @@
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="dateOfBirth">Date of Birth </label>
-        <input type="text" class="form-control" id="dateOfBirth" placeholder="date of birth dd/mm/yyyy" >
+        <input type="text" class="form-control" id="dateOfBirth" placeholder="date of birth dd/mm/yyyy" required >
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="ageOnJuly31">Date of Birth </label>
-        <input type="text" class="form-control" id="ageonJuly31" placeholder="Age as of July 31st" >
+        <input type="text" class="form-control" id="ageonJuly31" placeholder="Age as of July 31st"  required>
     </div>
   </div>
   <div class="row">
-     <div class="btn-group btn-group-justified" role="group" aria-label="...">
+    <div class='text-center col-sm-12' >
+
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id='genderMale'>Football</button>
+          <button  type="button" autofocus class="btn btn-default btnGender" id='genderMale' required >Male</button>
         </div>
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="genderFemale" required>Cheerleading</button>
+          <button type="button" class="btn btn-default btnGender" id="genderFemale" required>Female</button>
         </div>
-      </div>
       
     </div>
   </div>
