@@ -22,6 +22,8 @@
   </div>
 </div>
 <!--Begins main form -->
+
+<!-- Name fields -->
 <form class="form-group">
   <div class="row">
     <div class="col-sm-12 centerDiv">
@@ -29,6 +31,7 @@
         <input type="text" class="form-control" id="childsName" placeholder="Child's Name On Birth Certificate" >
     </div>
   </div>
+  <!-- Birth Date -->
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="dateOfBirth">Date of Birth </label>
@@ -37,8 +40,8 @@
   </div>
   <div class="row">
     <div class="col-sm-12">
-      <label class="sr-only" for="ageOnJuly31">Date of Birth </label>
-        <input type="number" min="5" max="14"  maxlength="2" class="form-control " id="ageonJuly31" placeholder="Age as of July 31st"  required>
+      <label class="sr-only" for="ageOnJuly31">Age on July 31, {{ date | date: 'yyyy'}}  </label>
+        <input type="number" min="5" max="14"  maxlength="2" class="form-control " id="ageonJuly31" placeholder="Age as of July 31, {{ date | date: 'yyyy'}}"  required>
     </div>
   </div>
   <!-- street address field-->
@@ -99,6 +102,64 @@
         <input type="email" class="form-control" id="parentsEmail" placeholder="Parent's Email Address" required >
     </div>
   </div>
+  <!-- experience field -->
+  <div class="row">
+    <div class='text-center col-sm-12' >
+        <div class="btn-group" role="group"> Experienced Player / Cheerleader ?
+          <button  type="button" autofocus class="btn btn-default btnGender" id='experienceYes' required >Yes</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default btnGender" id="experienceNo" required>No</button>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <label class="sr-only" for="yearsOfExperience">Number of Years Experience</label>
+        <input type="number" min="0" max="10" class="form-control" id="yearsOfExperience" placeholder="Number Of Years Experience" required >
+    </div>
+  </div>
+    <!-- school info -->
+  <div class="row">
+    <div class="col-sm-12">
+      <label class="sr-only" for="schoolAttending">School Attending Fall {{ date | date: "yyyy"}} </label>
+        <input type="text" class="form-control" id="schoolAttending" placeholder="School Attending Fall {{ date | date: 'yyyy'}}" required >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <label class="sr-only" for="gradeForFall">Grade For Fall {{ date | date: "yyyy"}} </label>
+        <input type="text"  class="form-control" id="gradeForFall" placeholder="Grade For Fall {{ date | date: 'yyyy'}}" required >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <label class="sr-only" for="lastTeamPlayedFor">What Team / Coach Did You Play / Cheer For Last Year</label>
+        <input type="text"  class="form-control" id="lastTeamPlayedFor" placeholder="What Team/Coach Were You With Last Year"  >
+    </div>
+  </div>
+  <!-- Parents info and whom the child lives with -->
+  <h1 class="text-center"><em>It <strong>is</strong> necessary to fill out the info for the parent the child does <strong>not</strong> live with.</em></h1>
+  <div class="row">
+    <div class='text-center col-sm-12' >
+      <h2>Child Lives With</h2>
+        <div class="btn-group" role="group">
+          <button  type="button" autofocus class="btn btn-default btnGender" id='whomChildLivesWith' required >Mother</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default btnGender" id="whomChildLivesWith" required>Father</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default btnGender" id="whomChildLivesWith" required>Both Parents</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default btnGender" id="whomChildLivesWith" required>Legal Guardian</button>
+        </div>
+    </div>
+  </div>
+
+
+
 
 
 
