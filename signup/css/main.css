@@ -34,6 +34,19 @@
  font-weight: bold;
 }
 
+/*** gender buttons sizing***/
+#genderFemale{
+  width: 200px;
+}
+#genderMale{
+  width: 200px;
+}
+#ageonJuly31 {
+  height: 40px;
+}
+#phoneNumberInput {
+  height: 50px; 
+}
 
 
 
