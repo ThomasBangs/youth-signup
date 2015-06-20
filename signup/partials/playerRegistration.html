@@ -158,7 +158,7 @@
     </div>
   </div>
   <!-- Mother'  Info -->
-   <div class="row">
+  <div class="row">
     <div class="col-sm-12">
       <h2 class="text-center">Mother's Information</h2>
       <label class="sr-only" for="mothersName">Mother's Name</label>
@@ -171,7 +171,7 @@
         <input type="text"  class="form-control" id="mothersAddress" placeholder="Mother's Address" required >
     </div>
   </div>
-   <div class="row">
+  <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="mothersCity">Mother's City</label>
         <input type="text"  class="form-control" id="mothersCity" placeholder="Mother's City" required  >
@@ -324,19 +324,19 @@
         </select>
       </div>
     </div>
-    <div class="row">
+  <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersZipCode">Father's Zip Code</label>
         <input type="text" minlength='5' maxlength="5" class="form-control" id="fathersZipCode" placeholder="Father's Zip Code" required >
     </div>
-    <div class="row">
+  <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersPhone">Father's Phone</label>
         <input type="tel" class="form-control" id="fathersPhone" placeholder="Father's Phone (include area code)" required >
     </div>
   </div>
   <!-- Guardian's Info -->
-    <div class="row">
+  <div class="row">
     <div class="col-sm-12">
       <h2 class="text-center">Guardian's Information</h2>
       <label class="sr-only" for="guardiansName">Guardian's Name</label>
@@ -349,16 +349,16 @@
         <input type="text"  class="form-control" id="guardiansAddress" placeholder="Guardian's Address" required >
     </div>
   </div>
-   <div class="row">
+  <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansCity">Guardian's City</label>
         <input type="text"  class="form-control" id="guardiansCity" placeholder="Guardian's City" required  >
     </div>
   </div>
-   <div class="row">
+  <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansState">Guardian's State</label>
-        <select name="state" class="form-control" id="guardiansState">
+        <select name="state" class="form-control" id="guardiansState" >
             <option value="AL">AL</option>
             <option value="AK">AK</option>
             <option value="AZ">AZ</option>
@@ -411,19 +411,63 @@
             <option value="WI">WI</option>
             <option value="WY">WY</option>
         </select>
-      </div>
     </div>
-    <div class="row">
+  </div>
+  <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansZipCode">Guardian's Zip Code</label>
         <input type="text" minlength='5' maxlength="5" class="form-control" id="guardiansZipCode" placeholder="Guardian's Zip Code" required >
     </div>
-    <div class="row">
+  </div>
+  <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansPhone">Guardian's Phone</label>
         <input type="tel" class="form-control" id="guardiansPhone" placeholder="Guardian's Phone (include area code)" required >
     </div>
   </div>
+  <!-- Medications taken by player  -->
+  <div class="col-sm-12">
+      <label class="sr-only" for="medicationCurrentlyTaken">List Any Medications Currently Being Taken</label>
+        <input type="textarea" class="form-control" id="medicationCurrentlyTaken" placeholder="List Any Medications Currently Being Taken By Child"  >
+  </div>
+    <!-- Medical or Physical Conditions -->
+  <div class="row">
+    <h2 class="text-center"><em>Important Info For The Coaches To Know</em></h2>
+    <div class="col-sm-12">
+        <label class="sr-only" for="medical-allergies">List Any Medical Conditions or Allergies</label>
+          <input type="textarea" class="form-control" id="medical-allergies" placeholder="List Any Medical Conditions or Allergies"  >
+    </div>
+  </div>
+  <!-- disclaimers -->
+  <div class="container-fluid waiverBox">
+    <h2 class="text-center">PARENTAL AUTHORIZATION & INDEMNIFICATION</h2>
+    <P> The undersigned parent and/or guardian of the above-named minor, hereby consents to the full participation by the above-named minor in the Tennessee Youth Football Alliance(TYFA) and agree for said minor to be assigned by TYFA or TYFA agents a TYFA team. </P>
+    <p> I acknowledge that the activities that my child will be involved in may be dangerous in nature and I represent that I know and understand those dangers to which my child will be exposed. I specifically acknowledge and understand that football/cheerleading is a sport with risk of serious injury or death.</p>
+    <p> I do hereby voluntarily assume on behaf of the above-named minoreach, every, and all risks and/or hazards to which said minor or myself might be exposed during TYFA activities including, but not limited to, playing said sport, cheerleading and or transportation to and from all activities and medical attention of any nature resulting from injuries sustained in the activities.</p>
+    <p> I do hereby <h3>WAIVE, RELEASE, ABSOLVE AND AGREE TO INDEMNIFY PAY AND HOLD SAFE AND HARMLESS</h3> said football/cheerleading program, it's entire organization, TYFA, the local league/community, their coaches, participants, Board of Directors, all officers, all assistants, persons and/or organizations that transport the participants for any purpose for and from all claims, injuries, damages of both a compensatory and punitive nature and for any and all other claims and/or damages which might arise out of and/or due to the above-named minor's participation in said activities.</p>
+    <p> The parent/guardian whose signature appears below(represented by checking the "Agree To Terms" below) does herby consent to any and all medical treatments including anesthesia and operations which may be deemed necessary by medical care providers attending to the above-named minor for injuries sustained in the activities.</p>
+    <p> I further agree and acknowledge that I am responsible for all charges incurred in connection with the treatment and care rendered to the above-named minor pursuant to this agreement.</p>
+    <p> By agreeing below, I also give this organization, as well as TYFA, permission to use my child's photograph as a participant on either website. <h3>I ACKNOWLEDGE THAT I HAVE FULLY READ THIS COVENANT AND AGREE AND CONSENT TO THESE TERMS AND CONDITIONS.</h3></p>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <label>I AGREE</label>
+        <input type="checkbox"  class="form-control" id="agreeToTerms" required > 
+    </div>
+  </div>
+  <!-- submit the form -->
+   <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2 class="text-center">Once You Have Agreed To The Conditions Above, Click To Submit</h2>
+        <button class="btn btn-primary btn-lg">submit</button>
+    </div>
+  </div>
+
+ 
+
+    
+
+
 
 
     

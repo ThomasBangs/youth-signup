@@ -1,4 +1,4 @@
-var app = angular.module("sportsSignUpApp", ["ngRoute"]);
+var app = angular.module("sportsSignUpApp", ["ngRoute", "firebase"]);
 
 
 
@@ -7,17 +7,24 @@ app.config(['$routeProvider',
     $routeProvider.
       when('/', {
         templateUrl: 'partials/home.html',
-        controller: ''
-      }).
-      when('/about', {
+        controller: ''})
+
+      . when('/about', {
         templateUrl: 'partials/about.html ',
-        controller: ''
-      }).
-      when('/player-registration', {
+        controller: ''})
+
+      .when("/register", {
+        templateUrl: "partials/register.html", controller: "AuthCtrl"})
+
+      . when('/player-registration', {
         templateUrl: 'partials/playerRegistration.html',
-        controller: ''
-      }).
-      otherwise({
+        controller: ''})
+      
+      .when("/login", {
+        templateUrl: "partials/login.html", controller: "AuthCtrl"})
+
+      . otherwise({
         redirectTo: '/'
       });
   }]);
+app.constant('API_URL', 'https://vivid-inferno-3744.firebaseIO.com');
