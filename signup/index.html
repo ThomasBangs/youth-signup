@@ -7,11 +7,11 @@
 
 </head>
 <!-- add controller to body -->
-<body ng-controller='MainController', 'AuthCtrl'>
+<body ng-controller='MainController'>
   <header>
     <h1 class="text-center">{{ title }}</h1>
   </header>
-  <ul>
+  <ul ng-controller='AuthCtrl'>
     <li><a href="/#/about"> about page</a></li>
     <li><a href="/#/home"> home page</a></li>
     <li><a href="/#/player-registration"> player sign up form </a></li>
