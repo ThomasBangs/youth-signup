@@ -4,8 +4,14 @@ app.controller('MainController', ['$scope', '$firebaseAuth', '$firebaseArray', '
 
   $scope.title = 'Youth Sports Sign Up';
   $scope.date = new Date();
+
     // download the data into a local object
-  $scope.messages = $firebaseArray(ref);
+  $scope.registrations = $firebaseArray(ref);
+
+  $scope.registrations.$add({
+    "name": "Steve",
+    "team": "Warriors"
+  }); 
   
 
 

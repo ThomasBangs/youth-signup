@@ -18,7 +18,7 @@ app.config(['$routeProvider',
 
       . when('/player-registration', {
         templateUrl: 'partials/playerRegistration.html',
-        controller: ''})
+        controller: 'registrationController'})
       
       .when("/login", {
         templateUrl: "partials/login.html", controller: "AuthCtrl"})
