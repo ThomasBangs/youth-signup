@@ -116,26 +116,26 @@
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="yearsOfExperience">Number of Years Experience</label>
-        <input type="number" min="0" max="10" class="form-control" id="yearsOfExperience" placeholder="Number Of Years Experience" required >
+        <input type="number" min="0" max="10" class="form-control" id="yearsOfExperience" placeholder="Number Of Years Experience" required ng-model="registration.yearsOfExperience">
     </div>
   </div>
     <!-- school info -->
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="schoolAttending">School Attending Fall {{ date | date: "yyyy"}} </label>
-        <input type="text" class="form-control" id="schoolAttending" placeholder="School Attending Fall {{ date | date: 'yyyy'}}" required >
+        <input type="text" class="form-control" id="schoolAttending" placeholder="School Attending Fall {{ date | date: 'yyyy'}}" required ng-model="registration.schoolAttending" >
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="gradeForFall">Grade For Fall {{ date | date: "yyyy"}} </label>
-        <input type="text"  class="form-control" id="gradeForFall" placeholder="Grade For Fall {{ date | date: 'yyyy'}}" required >
+        <input type="text"  class="form-control" id="gradeForFall" placeholder="Grade For Fall {{ date | date: 'yyyy'}}" required ng-model="registration.gradeForFall">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="lastTeamPlayedFor">What Team / Coach Did You Play / Cheer For Last Year</label>
-        <input type="text"  class="form-control" id="lastTeamPlayedFor" placeholder="What Team/Coach Were You With Last Year"  >
+        <input type="text"  class="form-control" id="lastTeamPlayedFor" placeholder="What Team/Coach Were You With Last Year" ng-model="registration.lastTeamPlayedFor" >
     </div>
   </div>
   <!-- Parents info and whom the child lives with -->
