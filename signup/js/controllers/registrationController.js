@@ -6,7 +6,8 @@ app.controller('registrationController', ['$scope', '$firebaseAuth', '$firebaseA
   $scope.cheerleaderSelect = false;
   $scope.genderMale = false;
   $scope.genderFemale = false;
-
+  $scope.experienceYes = false;
+  $scope.experienceNo = false;
   //   function($firebaseObject) {
   //   var ref = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com");
   //   // download physicsmarie's profile data into a local object
@@ -16,6 +17,18 @@ app.controller('registrationController', ['$scope', '$firebaseAuth', '$firebaseA
 
 
    
+// experienced player / cheerleader
+$scope.doYouHaveExpYes = function() {
+    $scope.experienceYes = true;
+    $scope.experienceNo = false;
+
+  };
+  $scope.doYouHaveExpNo = function() {
+    $scope.experienceYes = false;
+    $scope.experienceNo = true;
+
+  };
+
 
 
   
