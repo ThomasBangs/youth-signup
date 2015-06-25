@@ -8,6 +8,11 @@ app.controller('registrationController', ['$scope', '$firebaseAuth', '$firebaseA
   $scope.genderFemale = false;
   $scope.experienceYes = false;
   $scope.experienceNo = false;
+  $scope.livingWithMom = false;
+  $scope.livingWithDad = false;
+  $scope.livingWithBoth = false;
+  $scope.livingWithGuardian = false;
+
   //   function($firebaseObject) {
   //   var ref = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com");
   //   // download physicsmarie's profile data into a local object
@@ -29,6 +34,36 @@ $scope.doYouHaveExpYes = function() {
 
   };
 
+  // child lives with button click
+
+$scope.livesWithMom = function() {
+  $scope.livingWithMom = true;
+  $scope.livingWithDad = false;
+  $scope.livingWithBoth = false;
+  $scope.livingWithGuardian = false;
+
+  };
+  $scope.livesWithDad = function() {
+    $scope.livingWithMom = false;
+    $scope.livingWithDad = true;
+    $scope.livingWithBoth = false;
+    $scope.livingWithGuardian = false;
+
+  };
+  $scope.livesWithBothParents = function() {
+    $scope.livingWithMom = false;
+    $scope.livingWithDad = false;
+    $scope.livingWithBoth = true;
+    $scope.livingWithGuardian = false;
+
+  };
+  $scope.livesWithGuardian = function() {
+    $scope.livingWithMom = false;
+    $scope.livingWithDad = false;
+    $scope.livingWithBoth = false;
+    $scope.livingWithGuardian = true;
+
+  };
 
 
   
