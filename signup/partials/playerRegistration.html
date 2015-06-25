@@ -162,25 +162,25 @@
     <div class="col-sm-12">
       <h2 class="text-center">Mother's Information</h2>
       <label class="sr-only" for="mothersName">Mother's Name</label>
-        <input type="text"  class="form-control" id="mothersName" placeholder="Mother's Name" required >
+        <input type="text"  class="form-control" id="mothersName" placeholder="Mother's Name" required ng-model="registration.mothersName">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="mothersAddress">Mother's Address</label>
-        <input type="text"  class="form-control" id="mothersAddress" placeholder="Mother's Address" required >
+        <input type="text"  class="form-control" id="mothersAddress" placeholder="Mother's Address" required ng-model="registration.mothersAddress">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="mothersCity">Mother's City</label>
-        <input type="text"  class="form-control" id="mothersCity" placeholder="Mother's City" required  >
+        <input type="text"  class="form-control" id="mothersCity" placeholder="Mother's City" required  ng-model="registration.mothersCity">
     </div>
   </div>
    <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="mothersState">Mother's State</label>
-        <select name="state" class="form-control" id="mothersState">
+        <select name="state" class="form-control" id="mothersState" ng-model="registration.mothersState">
             <option value="AL">AL</option>
             <option value="AK">AK</option>
             <option value="AZ">AZ</option>
@@ -223,7 +223,7 @@
             <option value="RI">RI</option>
             <option value="SC">SC</option>
             <option value="SD">SD</option>
-            <option value="TN">TN</option>
+            <option  value="TN" selected="selected">TN</option>
             <option value="TX">TX</option>
             <option value="UT">UT</option>
             <option value="VT">VT</option>
@@ -238,12 +238,12 @@
     <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="mothersZipCode">Mother's Zip Code</label>
-        <input type="text" minlength='5' maxlength="5" class="form-control" id="mothersZipCode" placeholder="Mother's Zip Code" required >
+        <input type="text" minlength='5' maxlength="5" class="form-control" id="mothersZipCode" placeholder="Mother's Zip Code" required ng-model="registration.mothersZipCode">
     </div>
     <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="mothersPhone">Mother's Phone</label>
-        <input type="tel" class="form-control" id="mothersPhone" placeholder="Mother's Phone (include area code)" required >
+        <input type="tel" class="form-control" id="mothersPhone" placeholder="Mother's Phone (include area code)" required ng-model="registration.mothersPhone">
     </div>
   </div>
   <!-- Father's Info -->
@@ -251,25 +251,25 @@
     <div class="col-sm-12">
       <h2 class="text-center">Father's Information</h2>
       <label class="sr-only" for="fathersName">Father's Name</label>
-        <input type="text"  class="form-control" id="fathersName" placeholder="Father's Name" required >
+        <input type="text"  class="form-control" id="fathersName" placeholder="Father's Name" required ng-model="registration.fathersName">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersAddress">Father's Address</label>
-        <input type="text"  class="form-control" id="fathersAddress" placeholder="Father's Address" required >
+        <input type="text"  class="form-control" id="fathersAddress" placeholder="Father's Address" required ng-model="registration.fathersAddress">
     </div>
   </div>
    <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersCity">Father's City</label>
-        <input type="text"  class="form-control" id="fathersCity" placeholder="Father's City" required  >
+        <input type="text"  class="form-control" id="fathersCity" placeholder="Father's City" required  ng-model="registration.fathersCity">
     </div>
   </div>
    <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersState">Father's State</label>
-        <select name="state" class="form-control" id="fathersState">
+        <select name="state" class="form-control" id="fathersState" ng-model="registration.fathersState">
             <option value="AL">AL</option>
             <option value="AK">AK</option>
             <option value="AZ">AZ</option>
@@ -312,7 +312,7 @@
             <option value="RI">RI</option>
             <option value="SC">SC</option>
             <option value="SD">SD</option>
-            <option value="TN">TN</option>
+            <option value="TN" selected="selected">TN</option>
             <option value="TX">TX</option>
             <option value="UT">UT</option>
             <option value="VT">VT</option>
@@ -327,12 +327,12 @@
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersZipCode">Father's Zip Code</label>
-        <input type="text" minlength='5' maxlength="5" class="form-control" id="fathersZipCode" placeholder="Father's Zip Code" required ng-model='fathersZipCode'>
+        <input type="text" minlength='5' maxlength="5" class="form-control" id="fathersZipCode" placeholder="Father's Zip Code" required ng-model='registration.fathersZipCode'>
     </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersPhone">Father's Phone</label>
-        <input type="tel" class="form-control" id="fathersPhone" placeholder="Father's Phone (include area code)" required >
+        <input type="tel" class="form-control" id="fathersPhone" placeholder="Father's Phone (include area code)" required ng-model="registration.fathersPhone">
     </div>
   </div>
   <!-- Guardian's Info -->
@@ -340,25 +340,25 @@
     <div class="col-sm-12">
       <h2 class="text-center">Guardian's Information</h2>
       <label class="sr-only" for="guardiansName">Guardian's Name</label>
-        <input type="text"  class="form-control" id="guardiansName" placeholder="Guardian's Name" required >
+        <input type="text"  class="form-control" id="guardiansName" placeholder="Guardian's Name" required ng-model="registration.guardiansName">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansAddress">Guardian's Address</label>
-        <input type="text"  class="form-control" id="guardiansAddress" placeholder="Guardian's Address" required >
+        <input type="text"  class="form-control" id="guardiansAddress" placeholder="Guardian's Address" required ng-model="registration.guardiansAddress">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansCity">Guardian's City</label>
-        <input type="text"  class="form-control" id="guardiansCity" placeholder="Guardian's City" required  >
+        <input type="text"  class="form-control" id="guardiansCity" placeholder="Guardian's City" required ng-model="registration.guardiansCity" >
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansState">Guardian's State</label>
-        <select name="state" class="form-control" id="guardiansState" >
+        <select name="state" class="form-control" id="guardiansState" ng-model="registration.guardianState">
             <option value="AL">AL</option>
             <option value="AK">AK</option>
             <option value="AZ">AZ</option>
@@ -401,7 +401,7 @@
             <option value="RI">RI</option>
             <option value="SC">SC</option>
             <option value="SD">SD</option>
-            <option value="TN">TN</option>
+            <option value="TN" selected="selected">TN</option>
             <option value="TX">TX</option>
             <option value="UT">UT</option>
             <option value="VT">VT</option>
@@ -422,7 +422,7 @@
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansPhone">Guardian's Phone</label>
-        <input type="tel" class="form-control" id="guardiansPhone" placeholder="Guardian's Phone (include area code)" required >
+        <input type="tel" class="form-control" id="guardiansPhone" placeholder="Guardian's Phone (include area code)" required ng-model="registration.guardiansPhone">
     </div>
   </div>
   <!-- Medications taken by player  -->
