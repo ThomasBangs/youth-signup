@@ -1,6 +1,6 @@
 
 //firebase Auth
-app.controller(['AuthCtrl', function($scope, $firebaseAuth){
+app.controller('AuthCtrl', ["$http", "$scope", function($scope, $firebaseAuth) {
   var ref = new Firebase("https://sportssignup.firebaseio.com");
   $scope.authObj = $firebaseAuth(ref); 
 
