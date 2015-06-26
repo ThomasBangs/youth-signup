@@ -9,22 +9,26 @@ app.config(['$routeProvider',
         templateUrl: 'partials/home.html',
         controller: ''})
 
-      . when('/about', {
+      .when('/about', {
         templateUrl: 'partials/about.html ',
         controller: ''})
 
       .when("/register", {
         templateUrl: "partials/register.html", controller: "AuthCtrl"})
 
-      . when('/player-registration', {
+      .when('/player-registration', {
         templateUrl: 'partials/playerRegistration.html',
         controller: 'registrationController'})
       
       .when("/login", {
         templateUrl: "partials/login.html", controller: "AuthCtrl"})
+      
+      .when("/formsuccess", {
+        templateUrl: "partials/formsuccess.html", controller: ""
+      })
 
-      . otherwise({
+      .otherwise({
         redirectTo: '/'
       });
   }]);
-app.constant('API_URL', 'https://vivid-inferno-3744.firebaseIO.com');
+app.constant('API_URL', 'https://sportssignup.firebaseIO.com');

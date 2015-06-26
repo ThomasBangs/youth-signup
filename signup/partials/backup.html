@@ -9,10 +9,10 @@
       <!-- add checkboxes for cheer football -->
       <div class="btn-group btn-group-justified" role="group" aria-label="...">
         <div class="btn-group" role="group">
-          <button type="button" autofocus class="btn btn-default" id='footballSelect'  ng-click="footballSelected()">Football</button>
+          <button type="button" autofocus class="btn btn-default" id='footballSelect' required ng-click="footballSelected()">Football</button>
         </div>
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default" id="cheerSelect"  ng-click="cheerleaderSelected()">Cheerleading</button>
+          <button type="button" class="btn btn-default" id="cheerSelect" required ng-click="cheerleaderSelected()">Cheerleading</button>
         </div>
       </div>
     </div>
@@ -28,51 +28,51 @@
   <div class="row">
     <div class="col-sm-12 centerDiv">
       <label class="sr-only" for="childsName">Child's Name: As It Appears On Their Birth Certificate</label>
-        <input type="text" class="form-control" id="childsName" placeholder="Child's Name On Birth Certificate"  ng-model="registration.childsName" >
+        <input type="text" class="form-control" id="childsName" placeholder="Child's Name On Birth Certificate" required ng-model="registration.childsName" >
     </div>
   </div>
   <!-- Birth Date -->
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="dateOfBirth">Date of Birth </label>
-        <input type="text" class="form-control" id="dateOfBirth" placeholder="date of birth dd/mm/yyyy"  ng-model="registration.dateOfBirth">
+        <input type="text" class="form-control" id="dateOfBirth" placeholder="date of birth dd/mm/yyyy" required ng-model="registration.dateOfBirth">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="ageOnJuly31">Age on July 31, {{ date | date: 'yyyy'}}  </label>
-        <input type="number" min="5" max="14"  maxlength="2" class="form-control " id="ageonJuly31" placeholder="Age as of July 31, {{ date | date: 'yyyy'}}"   ng-model="registration.ageOnJuly31">
+        <input type="number" min="5" max="14"  maxlength="2" class="form-control " id="ageonJuly31" placeholder="Age as of July 31, {{ date | date: 'yyyy'}}"  required ng-model="registration.ageOnJuly31">
     </div>
   </div>
   <!-- street address field-->
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="playerStreetAddress">Player / Cheerleader Home Address</label>
-        <input type="text" class="form-control" id="playerStreetAddress" placeholder="Player/Cheerleader Street Address"  ng-model="registration.playerStreetAddress">
+        <input type="text" class="form-control" id="playerStreetAddress" placeholder="Player/Cheerleader Street Address" required ng-model="registration.playerStreetAddress">
     </div>
   </div>
   <!-- city field-->
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="playerCity">City</label>
-        <input type="text" class="form-control" id="playerCity" placeholder="City"  ng-model="registration.playerCity">
+        <input type="text" class="form-control" id="playerCity" placeholder="City" required ng-model="registration.playerCity">
     </div>
   </div>
   <!-- zip code -->
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="zipCode">City</label>
-        <input type="text" class="form-control" id="zipCode" placeholder="Zip Code"  ng-model="registration.zipCode">
+        <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" required ng-model="registration.zipCode">
     </div>
   </div>
 <!-- gender buttons-->
   <div class="row">
     <div class='text-center col-sm-12' >
         <div class="btn-group" role="group">
-          <button  type="button" autofocus class="btn btn-default btnGender" id='genderMale'  ng-click="boys()">Male</button>
+          <button  type="button" autofocus class="btn btn-default btnGender" id='genderMale' required ng-click="boys()">Male</button>
         </div>
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="genderFemale"  ng-click="girls()">Female</button>
+          <button type="button" class="btn btn-default btnGender" id="genderFemale" required ng-click="girls()">Female</button>
         </div>
     </div>
   </div>
@@ -80,56 +80,56 @@
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="primaryPhone">Primary Phone</label>
-        <input type="tel" class="form-control" id="primaryPhone" placeholder="Primary Phone (include area code)"  ng-model="registration.primaryPhone">
+        <input type="tel" class="form-control" id="primaryPhone" placeholder="Primary Phone (include area code)" required ng-model="registration.primaryPhone">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="cellPhone">Cell Phone</label>
-        <input type="tel" class="form-control" id="cellPhone" placeholder="Cell Phone (include area code)"  ng-model="registration.cellPhone">
+        <input type="tel" class="form-control" id="cellPhone" placeholder="Cell Phone (include area code)" required ng-model="registration.cellPhone">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="emergencyPhone">Emergency Phone</label>
-        <input type="tel" class="form-control" id="emergencyPhone" placeholder="Emergency Phone (include area code)"  ng-model="registration.emergencyPhone">
+        <input type="tel" class="form-control" id="emergencyPhone" placeholder="Emergency Phone (include area code)" required ng-model="registration.emergencyPhone">
     </div>
   </div>
   <!-- email fields -->
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="parentsEmail">Parent's Email</label>
-        <input type="email" class="form-control" id="parentsEmail" placeholder="Parent's Email Address"  ng-model="registration.parentsEmail" >
+        <input type="email" class="form-control" id="parentsEmail" placeholder="Parent's Email Address" required ng-model="registration.parentsEmail" >
     </div>
   </div>
   <!-- experience field -->
   <div class="row">
     <div class='text-center col-sm-12' >
         <div class="btn-group" role="group"> Experienced Player / Cheerleader ?
-          <button  type="button" autofocus class="btn btn-default btnGender" id='experienceYes'  ng-click="doYouHaveExpYes()">Yes</button>
+          <button  type="button" autofocus class="btn btn-default btnGender" id='experienceYes' required ng-click="doYouHaveExpYes()">Yes</button>
         </div>
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="experienceNo"  ng-click="doYouHaveExpNo()">No</button>
+          <button type="button" class="btn btn-default btnGender" id="experienceNo" required ng-click="doYouHaveExpNo()">No</button>
         </div>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="yearsOfExperience">Number of Years Experience</label>
-        <input type="number" min="0" max="10" class="form-control" id="yearsOfExperience" placeholder="Number Of Years Experience"  ng-model="registration.yearsOfExperience">
+        <input type="number" min="0" max="10" class="form-control" id="yearsOfExperience" placeholder="Number Of Years Experience" required ng-model="registration.yearsOfExperience">
     </div>
   </div>
     <!-- school info -->
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="schoolAttending">School Attending Fall {{ date | date: "yyyy"}} </label>
-        <input type="text" class="form-control" id="schoolAttending" placeholder="School Attending Fall {{ date | date: 'yyyy'}}"  ng-model="registration.schoolAttending" >
+        <input type="text" class="form-control" id="schoolAttending" placeholder="School Attending Fall {{ date | date: 'yyyy'}}" required ng-model="registration.schoolAttending" >
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="gradeForFall">Grade For Fall {{ date | date: "yyyy"}} </label>
-        <input type="text"  class="form-control" id="gradeForFall" placeholder="Grade For Fall {{ date | date: 'yyyy'}}"  ng-model="registration.gradeForFall">
+        <input type="text"  class="form-control" id="gradeForFall" placeholder="Grade For Fall {{ date | date: 'yyyy'}}" required ng-model="registration.gradeForFall">
     </div>
   </div>
   <div class="row">
@@ -144,16 +144,16 @@
     <div class='text-center col-sm-12' >
       <h2>Child Lives With</h2>
         <div class="btn-group" role="group">
-          <button  type="button" autofocus class="btn btn-default btnGender" id='livingWithMom'  ng-click="livesWithMom()">Mother</button>
+          <button  type="button" autofocus class="btn btn-default btnGender" id='livingWithMom' required ng-click="livesWithMom()">Mother</button>
         </div>
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="livingWithDad"  ng-click="livesWithDad()">Father</button>
+          <button type="button" class="btn btn-default btnGender" id="livingWithDad" required ng-click="livesWithDad()">Father</button>
         </div>
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="livingWithBoth"  ng-click="livesWithBothParents()">Both Parents</button>
+          <button type="button" class="btn btn-default btnGender" id="livingWithBoth" required ng-click="livesWithBothParents()">Both Parents</button>
         </div>
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="livingWithGuardian"  ng-click="livesWithGuardian()">Legal Guardian</button>
+          <button type="button" class="btn btn-default btnGender" id="livingWithGuardian" required ng-click="livesWithGuardian()">Legal Guardian</button>
         </div>
     </div>
   </div>
@@ -162,19 +162,19 @@
     <div class="col-sm-12">
       <h2 class="text-center">Mother's Information</h2>
       <label class="sr-only" for="mothersName">Mother's Name</label>
-        <input type="text"  class="form-control" id="mothersName" placeholder="Mother's Name"  ng-model="registration.mothersName">
+        <input type="text"  class="form-control" id="mothersName" placeholder="Mother's Name" required ng-model="registration.mothersName">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="mothersAddress">Mother's Address</label>
-        <input type="text"  class="form-control" id="mothersAddress" placeholder="Mother's Address"  ng-model="registration.mothersAddress">
+        <input type="text"  class="form-control" id="mothersAddress" placeholder="Mother's Address" required ng-model="registration.mothersAddress">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="mothersCity">Mother's City</label>
-        <input type="text"  class="form-control" id="mothersCity" placeholder="Mother's City"   ng-model="registration.mothersCity">
+        <input type="text"  class="form-control" id="mothersCity" placeholder="Mother's City" required  ng-model="registration.mothersCity">
     </div>
   </div>
    <div class="row">
@@ -238,12 +238,12 @@
     <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="mothersZipCode">Mother's Zip Code</label>
-        <input type="text" minlength='5' maxlength="5" class="form-control" id="mothersZipCode" placeholder="Mother's Zip Code"  ng-model="registration.mothersZipCode">
+        <input type="text" minlength='5' maxlength="5" class="form-control" id="mothersZipCode" placeholder="Mother's Zip Code" required ng-model="registration.mothersZipCode">
     </div>
     <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="mothersPhone">Mother's Phone</label>
-        <input type="tel" class="form-control" id="mothersPhone" placeholder="Mother's Phone (include area code)"  ng-model="registration.mothersPhone">
+        <input type="tel" class="form-control" id="mothersPhone" placeholder="Mother's Phone (include area code)" required ng-model="registration.mothersPhone">
     </div>
   </div>
   <!-- Father's Info -->
@@ -251,19 +251,19 @@
     <div class="col-sm-12">
       <h2 class="text-center">Father's Information</h2>
       <label class="sr-only" for="fathersName">Father's Name</label>
-        <input type="text"  class="form-control" id="fathersName" placeholder="Father's Name"  ng-model="registration.fathersName">
+        <input type="text"  class="form-control" id="fathersName" placeholder="Father's Name" required ng-model="registration.fathersName">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersAddress">Father's Address</label>
-        <input type="text"  class="form-control" id="fathersAddress" placeholder="Father's Address"  ng-model="registration.fathersAddress">
+        <input type="text"  class="form-control" id="fathersAddress" placeholder="Father's Address" required ng-model="registration.fathersAddress">
     </div>
   </div>
    <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersCity">Father's City</label>
-        <input type="text"  class="form-control" id="fathersCity" placeholder="Father's City"   ng-model="registration.fathersCity">
+        <input type="text"  class="form-control" id="fathersCity" placeholder="Father's City" required  ng-model="registration.fathersCity">
     </div>
   </div>
    <div class="row">
@@ -327,12 +327,12 @@
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersZipCode">Father's Zip Code</label>
-        <input type="text" minlength='5' maxlength="5" class="form-control" id="fathersZipCode" placeholder="Father's Zip Code"  ng-model='registration.fathersZipCode'>
+        <input type="text" minlength='5' maxlength="5" class="form-control" id="fathersZipCode" placeholder="Father's Zip Code" required ng-model='registration.fathersZipCode'>
     </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="fathersPhone">Father's Phone</label>
-        <input type="tel" class="form-control" id="fathersPhone" placeholder="Father's Phone (include area code)"  ng-model="registration.fathersPhone">
+        <input type="tel" class="form-control" id="fathersPhone" placeholder="Father's Phone (include area code)" required ng-model="registration.fathersPhone">
     </div>
   </div>
   <!-- Guardian's Info -->
@@ -340,19 +340,19 @@
     <div class="col-sm-12">
       <h2 class="text-center">Guardian's Information</h2>
       <label class="sr-only" for="guardiansName">Guardian's Name</label>
-        <input type="text"  class="form-control" id="guardiansName" placeholder="Guardian's Name"  ng-model="registration.guardiansName">
+        <input type="text"  class="form-control" id="guardiansName" placeholder="Guardian's Name" required ng-model="registration.guardiansName">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansAddress">Guardian's Address</label>
-        <input type="text"  class="form-control" id="guardiansAddress" placeholder="Guardian's Address"  ng-model="registration.guardiansAddress">
+        <input type="text"  class="form-control" id="guardiansAddress" placeholder="Guardian's Address" required ng-model="registration.guardiansAddress">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansCity">Guardian's City</label>
-        <input type="text"  class="form-control" id="guardiansCity" placeholder="Guardian's City"  ng-model="registration.guardiansCity" >
+        <input type="text"  class="form-control" id="guardiansCity" placeholder="Guardian's City" required ng-model="registration.guardiansCity" >
     </div>
   </div>
   <div class="row">
@@ -416,13 +416,13 @@
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansZipCode">Guardian's Zip Code</label>
-        <input type="text" minlength='5' maxlength="5" class="form-control" id="guardiansZipCode" placeholder="Guardian's Zip Code"  ng-model="registration.guardianZipCode">
+        <input type="text" minlength='5' maxlength="5" class="form-control" id="guardiansZipCode" placeholder="Guardian's Zip Code" required ng-model="registration.guardianZipCode">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="guardiansPhone">Guardian's Phone</label>
-        <input type="tel" class="form-control" id="guardiansPhone" placeholder="Guardian's Phone (include area code)"  ng-model="registration.guardiansPhone">
+        <input type="tel" class="form-control" id="guardiansPhone" placeholder="Guardian's Phone (include area code)" required ng-model="registration.guardiansPhone">
     </div>
   </div>
   <!-- Medications taken by player  -->
@@ -452,11 +452,11 @@
   <div class="row">
     <div class="col-sm-12 text-center">
       <label>I AGREE</label>
-        <input type="checkbox"  class="form-control" id="agreeToTerms"  ng-model="agreeToTerms" > 
+        <input type="checkbox"  class="form-control" id="agreeToTerms" required ng-model="agreeToTerms" required> 
     </div>
   </div>
   <!-- submit the form -->
-  <input class="btn btn-default text-center" type="submit" value="Submit" ng-click="saveRegistration()">
+  <input class="btn btn-default text-center" type="submit" value="Submit" ng-submit="saveRegistration(registration)">
  
 
     

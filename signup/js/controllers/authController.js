@@ -1,24 +1,44 @@
-app.controller('AuthCtrl', ['$scope', '$location', 'Auth', function($scope, $location, Auth){
-    $scope.login = function() {
-      Auth.login($scope.user.email, $scope.user.password, function() {
-        $location.path('/');
-        $scope.$apply();
-      });
-    };
 
-    $scope.register = function() {
-      Auth.register($scope.user.email, $scope.user.password, function() {
-        Auth.login($scope.user.email, $scope.user.password, function() {
-          $location.path('/');
-          $scope.$apply();
-        });
-      });
-    };
+//firebase Auth
+app.controller(['AuthCtrl', function($scope, $firebaseAuth){
+  var ref = new Firebase("https://sportssignup.firebaseio.com");
+  $scope.authObj = $firebaseAuth(ref); 
 
-    $scope.logout=function(){
-      Auth.logout(function() {
-        $location.path('/login');
-        $scope.$apply();
-      });
-    };
-  }]);
+  $scope.authObj.$authWithPassword({
+    email: "thomasbangssr@gmail.com",
+    password: "redroof"
+  }).then(function(authData) {
+      //User authenticated
+  }).catch(function(error) {
+    //Authentication error
+  })
+//Detecting Auth State
+  $scope.authObj.$onAuth(function(authData) {
+    if (authData) {
+      //User logged in
+    } else {
+      //User logged out
+    }
+  });
+//Creating Users
+$scope.authObj.ref.$createUser({
+  email: "",
+  password: ""
+}).then(function(userData){
+  // User created
+}).catch(function(error){
+  // Error creating User
+});
+
+
+    // ... 
+}]);
+
+
+
+
+
+
+
+
+
