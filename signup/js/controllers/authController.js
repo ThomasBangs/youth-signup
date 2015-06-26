@@ -1,38 +1,29 @@
 
-//firebase Auth
-app.controller('AuthCtrl', ["$http", "$scope", function($scope, $firebaseAuth) {
-  var ref = new Firebase("https://sportssignup.firebaseio.com");
-  $scope.authObj = $firebaseAuth(ref); 
 
-  $scope.authObj.$authWithPassword({
-    email: "thomasbangssr@gmail.com",
-    password: "redroof"
-  }).then(function(authData) {
-      //User authenticated
-  }).catch(function(error) {
-    //Authentication error
-  })
-//Detecting Auth State
-  $scope.authObj.$onAuth(function(authData) {
-    if (authData) {
-      //User logged in
-    } else {
-      //User logged out
-    }
-  });
-//Creating Users
-$scope.authObj.ref.$createUser({
-  email: "",
-  password: ""
-}).then(function(userData){
-  // User created
-}).catch(function(error){
-  // Error creating User
+app.factory("Auth", function($firebaseAuth) {
+  var ref = new Firebase("https://sportssignup.firebaseio.com");
+  return $firebaseAuth(ref); 
+  
 });
+//firebase Auth
+app.controller("AuthCtrl", function($scope, Auth) {
+
+  //login with Facebook
+  $scope.login = function() {
+    Auth.$authWithOAuthPopup("facebook").then(function(authData) {
+      console.log(authData);
+    }).catch(function(error) {
+      console.log(error);
+    });
+  }
+  // logout
+  $scope.logout = function() {
+    Auth.$unauth();
+  }
 
 
     // ... 
-}]);
+});
 
 
 

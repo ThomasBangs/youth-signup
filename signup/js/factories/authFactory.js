@@ -38,3 +38,6 @@
 //     }
 //   return {login:login, register:register, logout:logout, getAuth:getAuth};
 //   }]);
+
+
+

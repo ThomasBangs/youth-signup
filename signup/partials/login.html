@@ -1,8 +1,8 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-xs-4"></div>
   <div class="col-xs-4">
-    <div class="pannel pannel-default">
-      <div class="pannel-body">
+    <div class="panel panel-default">
+      <div class="panel-body">
         <h1>Login</h1>
         <form role="form" novalidate="novalidate" name="userForm">
           <div class="form-group">
@@ -16,4 +16,8 @@
           <button ng-show="userForm.$valid" ng-click="login()" class="btn btn-primary">Login</button>
         </form>
       </div>
-    </div>
+    </div> -->
+
+  <div class = "panel" ng-controller="AuthCtrl">
+    <button class="btn btn-primary" ng-click="login()">login</button>
+  </div>
