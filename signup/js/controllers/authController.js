@@ -7,13 +7,16 @@ app.factory("Auth", function($firebaseAuth) {
 });
 //firebase Auth
 app.controller("AuthCtrl", function($scope, Auth) {
+  Auth.$onAuth(function(authData) {
+    $scope.authData = authData;
+    console.log(authData);
+  });
+
 
   //login with Facebook
   $scope.login = function() {
-    Auth.$authWithOAuthPopup("facebook").then(function(authData) {
-      console.log(authData);
-    }).catch(function(error) {
-      console.log(error);
+    Auth.$authWithOAuthPopup("facebook").catch(function(error) {
+      console.error(error);
     });
   }
   // logout
