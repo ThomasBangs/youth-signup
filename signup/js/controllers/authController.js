@@ -18,6 +18,7 @@ app.controller("AuthCtrl", function($scope, Auth) {
     Auth.$authWithOAuthPopup("facebook").catch(function(error) {
       console.error(error);
     });
+    
   }
   // logout
   $scope.logout = function() {
