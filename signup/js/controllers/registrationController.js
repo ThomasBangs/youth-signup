@@ -2,18 +2,21 @@ app.factory("userProfile", ["$firebaseArray",
   function($firebaseArray) {
     // create a reference to the Firebase database where we will store our data
     var User = {};
-    var ref = new Firebase("https://sportssignup.firebaseio.com/profile/");
+    var ref = new Firebase("https://sportssignup.firebaseio.com");
 
     return $firebaseArray(ref).$asArray();
   }
 ]);
 
 
+app.controller("registrationController", function($scope, $firebaseArray){
+  
+});
 
 
-app.controller("registrationController", function($scope, Auth, $firebaseArray) {
-  var ref = new Firebase("https://sportssignup.firebaseio.com/af/array/full/");
-  $scope.messages = $firebaseArray(ref);
+
+
+
 
 //   // experienced player / cheerleader
 //   $scope.doYouHaveExpYes = function() {
@@ -70,7 +73,7 @@ app.controller("registrationController", function($scope, Auth, $firebaseArray) 
 
 //   };
   
-});
+
 
 
 

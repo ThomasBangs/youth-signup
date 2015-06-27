@@ -1,12 +1,12 @@
 
 
-app.factory("Auth", function($firebaseAuth) {
+app.factory("Auth", function($firebaseAuth, $location) {
   var ref = new Firebase("https://sportssignup.firebaseio.com");
   return $firebaseAuth(ref); 
   
 });
 //firebase Auth
-app.controller("AuthCtrl", function($scope, Auth) {
+app.controller("AuthCtrl", function($scope, Auth, $location) {
   Auth.$onAuth(function(authData) {
     $scope.authData = authData;
     console.log(authData);
@@ -25,6 +25,8 @@ app.controller("AuthCtrl", function($scope, Auth) {
   // logout
   $scope.logout = function() {
     Auth.$unauth();
+    $location.path("/");
+
   }
 
 
