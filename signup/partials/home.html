@@ -1,8 +1,12 @@
-<h1>This is the home page</h1>
-<div class = "panel text-center" ng-controller="AuthCtrl">
-    <button class="btn btn-primary" ng-click="login()">Login With Facebook</button>
-</div>
+<h1 class="text-center">Welcome To Youth Sports Online Sign Up</h1>
+<div class="jumbotron" ng-controller="AuthCtrl">
+  <div class = "panel text-center" ng-hide="authData" >
+      <button class="btn btn-default" ng-click="login()">Login With Facebook</button>
+  </div>
 
-<div class = "panel text-center" ng-controller="AuthCtrl">
-    <button class="btn btn-primary" ng-click="logout()">login</button>
+  <div class = "panel text-center" ng-show="authData">
+    <img ng-src="{{ authData.facebook.cachedUserProfile.picture.data.url }}" />
+    <p> Welcome {{ authData.facebook.displayName }} </p>
+      <button class="btn btn-default" ng-click="logout()">logout</button>
+  </div>
 </div>
