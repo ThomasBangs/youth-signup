@@ -19,6 +19,7 @@ app.config(['$routeProvider',
       .when('/player-registration', {
         templateUrl: 'partials/playerRegistration.html',
         controller: 'registrationController',
+        
         resolve: {
               currentAuth: function(Auth) {
                 return Auth.$waitForAuth();

@@ -1,16 +1,42 @@
-app.factory("userProfile", ["$firebaseArray",
-  function($firebaseArray) {
-    // create a reference to the Firebase database where we will store our data
-    var User = {};
-    var ref = new Firebase("https://sportssignup.firebaseio.com");
+// app.factory("userProfile", ["$firebaseArray",
+//   function($firebaseArray) {
+//     // create a reference to the Firebase database where we will store our data
+//     var User = {};
+//     var ref = new Firebase("https://sportssignup.firebaseio.com");
 
-    return $firebaseArray(ref).$asArray();
+//     return $firebaseArray(ref).$asArray();
+//   }
+// ]);
+
+
+app.controller("registrationController", function($scope, $firebaseArray, Auth) {
+ var ref = new Firebase("https://sportssignup.firebaseio.com/users/" + $scope.uid);
+
+ $scope.form = $firebaseArray(ref);
+
+  $scope.footballSelected =function() {
+        $scope.footballSelect = "football";
   }
-]);
 
 
-app.controller("registrationController", function($scope, $firebaseArray){
-  
+
+
+
+
+
+
+
+  $scope.saveForm = function() {
+
+    
+    
+    $scope.form.$add({
+
+
+      
+      sport: $scope.footballSelect
+    });
+  }
 });
 
 
