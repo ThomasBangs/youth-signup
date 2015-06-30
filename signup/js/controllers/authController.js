@@ -35,7 +35,7 @@ app.controller("AuthCtrl", function($scope, Auth, $location) {
     // we would probably save a profile when we register new users on our site
 // we could also read the profile to see if it's null
 // here we will just simulate this with an isNewUser boolean
-var isNewUser = true;
+ var isNewUser = true;
 
 var ref = new Firebase("https://sportssignup.firebaseio.com");
   ref.onAuth(function(authData) {
@@ -58,9 +58,9 @@ function getName(authData) {
        return authData.twitter.displayName;
      case 'facebook':
        return authData.facebook.displayName;
-  }
-}
-});
+     }
+   }
+ });
 
 
 

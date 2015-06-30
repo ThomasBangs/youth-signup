@@ -9,17 +9,23 @@
 // ]);
 
 
-app.controller("registrationController", function($scope, $firebaseArray, Auth) {
- var ref = new Firebase("https://sportssignup.firebaseio.com/users/" + $scope.uid);
+app.controller("registrationController", function( $scope, $firebaseArray, $firebaseAuth ) {
 
- $scope.form = $firebaseArray(ref);
+var formRef = new Firebase("https://sportssignup.firebaseio.com");
+$scope.authObj = $firebaseAuth(formRef);
+var authData = $scope.authObj.$getAuth();
 
+$scope.form = $firebaseArray(formRef.child("users").child("profile").child(authData.facebook.id));
+
+
+
+  
   $scope.footballSelected =function() {
         $scope.footballSelect = "football";
+        
   }
-
-
-
+ 
+ 
 
 
 
@@ -28,14 +34,9 @@ app.controller("registrationController", function($scope, $firebaseArray, Auth) 
 
   $scope.saveForm = function() {
 
-    
-    
-    $scope.form.$add({
-
-
       
-      sport: $scope.footballSelect
-    });
+    
+    $scope.form.$add($scope.registration);
   }
 });
 
