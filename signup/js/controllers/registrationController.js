@@ -9,13 +9,14 @@
 // ]);
 
 
-app.controller("registrationController", function( $scope, $firebaseArray, $firebaseAuth ) {
+app.controller("registrationController", function( $scope, $firebaseArray, $firebaseAuth, Auth ) {
 
 var formRef = new Firebase("https://sportssignup.firebaseio.com");
 $scope.authObj = $firebaseAuth(formRef);
 var authData = $scope.authObj.$getAuth();
 
-$scope.form = $firebaseArray(formRef.child("users").child("profile").child(authData.facebook.id));
+$scope.form = $firebaseArray(formRef.child("users").child(authData.uid).child("profile"));
+
 
 
 
