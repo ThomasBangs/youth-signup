@@ -13,13 +13,13 @@ app.config(['$routeProvider',
         templateUrl: 'partials/about.html ',
         controller: ''})
 
-      .when("/register", {
-        templateUrl: "partials/register.html", controller: "AuthCtrl"})
+      .when("/profile", {
+        templateUrl: "partials/profile.html", controller: "formCtrl"})
 
       .when('/player-registration', {
         templateUrl: 'partials/playerRegistration.html',
-        controller: 'registrationController',
-        
+        controller: 'formCtrl',
+
         resolve: {
               currentAuth: function(Auth) {
                 return Auth.$waitForAuth();
