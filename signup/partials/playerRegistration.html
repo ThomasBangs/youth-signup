@@ -15,16 +15,13 @@
 <!--Begins main form -->
 
 <form class="form-group" >
-<!-- add checkboxes for cheer football -->
-  <div class="btn-group btn-group-justified" role="group" aria-label="...">
-    <div class="btn-group" role="group">
-      <button type="button" autofocus class="btn btn-default" id='registration.footballSelect'  ng-click="footballSelected()">Football</button>
-    </div>
-    <div class="btn-group" role="group">
-      <button type="button" class="btn btn-default" ng-model= "registration.cheerselect" ng-click="cheerleaderSelected()">Cheerleading</button>
-    </div>
+<!-- add radio buttons for cheer football -->
+  <div class="text-center">
+    <input type="radio" id="footballChecked" name="sport" value="football" checked ng-model="registration.sport">
+      <label class="btn btn-primary btn-toggle" for="footballChecked" >FOOTBALL</label>
+    <input type="radio" id="cheerChecked" name="sport" value="cheerleading" ng-model="registration.sport">     
+      <label  class="btn btn-primary btn-toggle" for="cheerChecked">CHEERLEADING</label>
   </div>
-
 
 <!-- Name fields -->
   <div class="row">
@@ -68,17 +65,12 @@
     </div>
   </div>
 <!-- gender buttons-->
-  <div class="row">
-    <div class='text-center col-sm-12' >
-        <div class="btn-group" role="group">
-          <button  type="button" autofocus class="btn btn-default btnGender" id='genderMale'  ng-click="boys()">Male</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="genderFemale"  ng-click="girls()">Female</button>
-        </div>
-    </div>
+   <div class="text-center">
+    <input type="radio" id="male" name="gender" value="male" checked ng-model="registration.gender">
+      <label class="btn btn-primary btn-toggle" for="male" >MALE</label>
+    <input  type="radio" id="female" name="gender" value="female" ng-model="registration.gender"> <label class="btn btn-primary btn-toggle" for="female">FEMALE</label>
   </div>
-    <!-- phone number fields -->
+<!-- phone number fields -->
   <div class="row">
     <div class="col-sm-12">
       <label class="sr-only" for="primaryPhone">Primary Phone</label>
@@ -105,15 +97,12 @@
     </div>
   </div>
   <!-- experience field -->
-  <div class="row">
-    <div class='text-center col-sm-12' >
-        <div class="btn-group" role="group"> Experienced Player / Cheerleader ?
-          <button  type="button" autofocus class="btn btn-default btnGender" id='experienceYes'  ng-click="doYouHaveExpYes()">Yes</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="experienceNo"  ng-click="doYouHaveExpNo()">No</button>
-        </div>
-    </div>
+  <div class="text-center">
+    <h2>Do The Child Have Experience Playing / Cheering?</h2>
+      <input type="radio" id="yes" name="experience" value="child has experience" >
+        <label class="btn btn-primary btn-toggle" for="yes" >YES</label>
+      <input  type="radio" id="no" name="experience" value="no experience">     
+        <label class="btn btn-primary btn-toggle" for="no">NO</label>
   </div>
   <div class="row">
     <div class="col-sm-12">
@@ -142,23 +131,18 @@
   </div>
   <!-- Parents info and whom the child lives with -->
   <h1 class="text-center"><em>It <strong>is</strong> necessary to fill out the info for the parent the child does <strong>not</strong> live with.</em></h1>
-  <div class="row">
-    <div class='text-center col-sm-12' >
-      <h2>Child Lives With</h2>
-        <div class="btn-group" role="group">
-          <button  type="button" autofocus class="btn btn-default btnGender" id='livingWithMom'  ng-click="livesWithMom()">Mother</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="livingWithDad"  ng-click="livesWithDad()">Father</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="livingWithBoth"  ng-click="livesWithBothParents()">Both Parents</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="livingWithGuardian"  ng-click="livesWithGuardian()">Legal Guardian</button>
-        </div>
-    </div>
+   <div class="text-center">
+    <h2>With Whom Does The Child Live?</h2>
+      <input type="radio" id="mom" name="experience" value="lives with mom" ng-model="registration.livesWith">
+        <label class="btn btn-primary btn-toggle" for="mom" >mother</label>
+      <input  type="radio" id="dad" name="experience" value="lives with dad" ng-model="registration.livesWith">     
+        <label class="btn btn-primary btn-toggle" for="dad">father</label>
+      <input type="radio" id="both" name="experience" value="lives with both parents" ng-model="registration.livesWith">
+        <label class="btn btn-primary btn-toggle" for="both" >both</label>
+      <input  type="radio" id="guardian" name="experience" value="lives with a guardian" ng-model="registration.livesWith">     
+        <label class="btn btn-primary btn-toggle" for="guardian">guardian</label>
   </div>
+
   <!-- Mother'  Info -->
   <div class="row">
     <div class="col-sm-12">
@@ -451,23 +435,19 @@
     <p> I further agree and acknowledge that I am responsible for all charges incurred in connection with the treatment and care rendered to the above-named minor pursuant to this agreement.</p>
     <p> By agreeing below, I also give this organization, as well as TYFA, permission to use my child's photograph as a participant on either website. <h3>I ACKNOWLEDGE THAT I HAVE FULLY READ THIS COVENANT AND AGREE AND CONSENT TO THESE TERMS AND CONDITIONS.</h3></p>
   </div>
-  <div class="row">
-    <div class="col-sm-12 text-center">
-      <label>I AGREE</label>
-        <input type="checkbox"  class="form-control" id="agreeToTerms"  ng-model="registration.agreeToTerms" > 
-    </div>
-  </div>
-  <!-- submit the form -->
+  <!--agree to terms  -->
   <div class="text-center">
+    <input type="radio" id="agree" name="agree" value="I agree to the terms." ng-model="registration.agree">
+      <label class="btn btn-primary btn-toggle" for="agree" >I AGREE</label>
+    
+  </div>
+<!-- submit the form -->
+  <div class="text-center" ng-show="registration.agree">
     <input class="btn btn-default " type="submit" value="Submit" ng-click="saveForm()">
   </div>
  
 <!-- starts edit form -->
-  <div ng-controller="formCtrl">
-  <div class="text-center">
-    {{ registration.childsName }}
   </div>
-</div>
 
 
 
