@@ -1,6 +1,7 @@
 var app = angular.module("sportsSignUpApp", ["ngRoute", "firebase"]);
 
 
+app.constant('API_URL', 'https://sportssignup.firebaseio.com');
 
 app.config(['$routeProvider',
   function($routeProvider) {
@@ -14,11 +15,11 @@ app.config(['$routeProvider',
         controller: ''})
 
       .when("/profile", {
-        templateUrl: "partials/profile.html", controller: "formCtrl"})
+        templateUrl: "partials/profile.html", controller: "ProfileCtrl"})
 
       .when('/player-registration', {
         templateUrl: 'partials/playerRegistration.html',
-        controller: 'formCtrl',
+        controller: "FormCtrl",
 
         resolve: {
               currentAuth: function(Auth) {
@@ -38,4 +39,9 @@ app.config(['$routeProvider',
         redirectTo: '/'
       });
   }]);
-app.constant('API_URL', 'https://sportssignup.firebaseIO.com');
+
+app.service('myService', function(){
+  this.editTask = {}; // object to share
+  this.editKey = -1; // index of the object in the array
+  this.listRef = null; // ref to the Firebase array
+});

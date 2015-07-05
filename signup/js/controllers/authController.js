@@ -6,9 +6,9 @@ app.factory("Auth", function($firebaseAuth, $location) {
   
 });
 //firebase Auth
-app.controller("AuthCtrl", function($scope, Auth, $location) {
+app.controller("AuthCtrl", function($scope, Auth, $location, $rootScope) {
   Auth.$onAuth(function(authData) {
-    $scope.authData = authData;
+    $rootScope.authData = authData;
     console.log(authData);
 
 

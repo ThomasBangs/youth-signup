@@ -1,4 +1,4 @@
-app.controller("formCtrl",  function($scope, $firebaseArray){
+app.controller("FormCtrl",  function($scope, $firebaseArray, $rootScope, $location){
 // connect to firebase
   var ref = new Firebase("https://sportssignup.firebaseio.com/users/profile");
   var fb = $firebaseArray(ref);
@@ -12,5 +12,4 @@ app.controller("formCtrl",  function($scope, $firebaseArray){
 
 
 });
-
 

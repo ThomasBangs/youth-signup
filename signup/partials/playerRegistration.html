@@ -98,10 +98,10 @@
   </div>
   <!-- experience field -->
   <div class="text-center">
-    <h2>Do The Child Have Experience Playing / Cheering?</h2>
-      <input type="radio" id="yes" name="experience" value="child has experience" >
+    <h2>Does The Child Have Experience Playing / Cheering?</h2>
+      <input type="radio" id="yes" name="experience" value="child has experience" ng-model="registration.experience">
         <label class="btn btn-primary btn-toggle" for="yes" >YES</label>
-      <input  type="radio" id="no" name="experience" value="no experience">     
+      <input  type="radio" id="no" name="experience" value="no experience" ng-model="registration.experience">     
         <label class="btn btn-primary btn-toggle" for="no">NO</label>
   </div>
   <div class="row">
@@ -133,13 +133,13 @@
   <h1 class="text-center"><em>It <strong>is</strong> necessary to fill out the info for the parent the child does <strong>not</strong> live with.</em></h1>
    <div class="text-center">
     <h2>With Whom Does The Child Live?</h2>
-      <input type="radio" id="mom" name="experience" value="lives with mom" ng-model="registration.livesWith">
+      <input type="radio" id="mom" name="livesWith" value="lives with mom" ng-model="registration.livesWith">
         <label class="btn btn-primary btn-toggle" for="mom" >mother</label>
-      <input  type="radio" id="dad" name="experience" value="lives with dad" ng-model="registration.livesWith">     
+      <input  type="radio" id="dad" name="livesWith" value="lives with dad" ng-model="registration.livesWith">     
         <label class="btn btn-primary btn-toggle" for="dad">father</label>
-      <input type="radio" id="both" name="experience" value="lives with both parents" ng-model="registration.livesWith">
+      <input type="radio" id="both" name="livesWith" value="lives with both parents" ng-model="registration.livesWith">
         <label class="btn btn-primary btn-toggle" for="both" >both</label>
-      <input  type="radio" id="guardian" name="experience" value="lives with a guardian" ng-model="registration.livesWith">     
+      <input  type="radio" id="guardian" name="livesWith" value="lives with a guardian" ng-model="registration.livesWith">     
         <label class="btn btn-primary btn-toggle" for="guardian">guardian</label>
   </div>
 
@@ -412,10 +412,7 @@
     </div>
   </div>
   <!-- Medications taken by player  -->
-  <div class="col-sm-12">
-      <label class="sr-only" for="medicationCurrentlyTaken">List Any Medications Currently Being Taken</label>
-        <input type="text" class="form-control" id="medicationCurrentlyTaken" placeholder="List Any Medications Currently Being Taken By Child" ng-model="registration.medicationCurrentlyTaken" >
-  </div>
+  
     <!-- Medical or Physical Conditions -->
   <div class="row">
     <h2 class="text-center"><em>Important Info For The Coaches To Know</em></h2>
@@ -423,6 +420,10 @@
         <label class="sr-only" for="medical-allergies">List Any Medical Conditions or Allergies</label>
           <input type="text" class="form-control" id="medicalAllergies" placeholder="List Any Medical Conditions or Allergies" ng-model="registration.medicalAllergies" >
     </div>
+    <div class="col-sm-12">
+      <label class="sr-only" for="medicationCurrentlyTaken">List Any Medications Currently Being Taken</label>
+        <input type="text" class="form-control" id="medicationCurrentlyTaken" placeholder="List Any Medications Currently Being Taken By Child" ng-model="registration.medicationCurrentlyTaken" >
+  </div>
   </div>
   <!-- disclaimers -->
   <div class="container-fluid waiverBox">
@@ -443,27 +444,14 @@
   </div>
 <!-- submit the form -->
   <div class="text-center" ng-show="registration.agree">
-    <input class="btn btn-default " type="submit" value="Submit" ng-click="saveForm()">
+    <input class="btn btn-default " type="submit" value="Submit" ng-click="saveForm(registration)">
   </div>
  
-<!-- starts edit form -->
-  </div>
 
 
+</form>  
+<!-- end of registration -->
 
-    
-      
-
-
-
+<!-- begin edit view -->
 
 
-
-
-
-
-
-
-
-  
-</form>

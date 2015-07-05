@@ -28,10 +28,10 @@
   <ul ng-controller='AuthCtrl'>
     <li><a href="/#/about"> about page</a></li>
     <li><a href="/#/home"> home page</a></li>
-    <li><a href="/#/player-registration"> player sign up form </a></li>
+    <li><a href="/#/player-registration" ng-show="authData"> player sign up form </a></li>
     <li><a href="/#/login"> login </a></li>
     <li><a href="/#/profile"> profile </a></li>
-    <li><button ng-click='logout()'>logout</button></li>
+    <li><button ng-click='logout()' ng-show="authData">logout</button></li>
   </ul>
 <!-- add div to render template views -->
   <div ng-view></div>
@@ -52,6 +52,8 @@
   <script src="js/controllers/mainController.js"></script>
   <script src="js/controllers/authController.js"></script>
   <script src="js/controllers/registrationController.js"></script>
+  <script src="js/controllers/profileCtrl.js"></script>
+  
 
 </body>
 </html>

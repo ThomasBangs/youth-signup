@@ -14,476 +14,62 @@
 </div>
 <!--Begins main form -->
 
-<form class="form-group" >
-<!-- add checkboxes for cheer football -->
-  <div class="btn-group btn-group-justified" role="group" aria-label="...">
-    <div class="btn-group" role="group">
-      <button type="button" autofocus class="btn btn-default" id='registration.footballSelect'  ng-click="footballSelected()">Football</button>
-    </div>
-    <div class="btn-group" role="group">
-      <button type="button" class="btn btn-default" ng-model= "registration.cheerselect" ng-click="cheerleaderSelected()">Cheerleading</button>
-    </div>
-  </div>
 
-
-<!-- Name fields -->
-  <div class="row">
-    <div class="col-sm-12 centerDiv">
-      <label class="sr-only" for="childsName">Child's Name: As It Appears On Their Birth Certificate</label>
-        <input type="text" class="form-control" id="childsName" placeholder="Child's Name On Birth Certificate"  ng-model="registration.childsName" >
-    </div>
-  </div>
-  <!-- Birth Date -->
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="dateOfBirth">Date of Birth </label>
-        <input type="text" class="form-control" id="dateOfBirth" placeholder="date of birth dd/mm/yyyy"  ng-model="registration.dateOfBirth" >
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="ageOnJuly31">Age on July 31, {{ date | date: 'yyyy'}}  </label>
-        <input type="number" min="5" max="14"  maxlength="2" class="form-control " id="ageonJuly31" placeholder="Age as of July 31, {{ date | date: 'yyyy'}}"   ng-model="registration.ageOnJuly31">
-    </div>
-  </div>
-  <!-- street address field-->
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="playerStreetAddress">Player / Cheerleader Home Address</label>
-        <input type="text" class="form-control" id="playerStreetAddress" placeholder="Player/Cheerleader Street Address"  ng-model="registration.playerStreetAddress">
-    </div>
-  </div>
-  <!-- city field-->
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="playerCity">City</label>
-        <input type="text" class="form-control" id="playerCity" placeholder="City"  ng-model="registration.playerCity">
-    </div>
-  </div>
-  <!-- zip code -->
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="zipCode">City</label>
-        <input type="text" class="form-control" id="zipCode" placeholder="Zip Code"  ng-model="registration.zipCode">
-    </div>
-  </div>
-<!-- gender buttons-->
-  <div class="row">
-    <div class='text-center col-sm-12' >
-        <div class="btn-group" role="group">
-          <button  type="button" autofocus class="btn btn-default btnGender" id='genderMale'  ng-click="boys()">Male</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="genderFemale"  ng-click="girls()">Female</button>
-        </div>
-    </div>
-  </div>
-    <!-- phone number fields -->
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="primaryPhone">Primary Phone</label>
-        <input type="tel" class="form-control" id="primaryPhone" placeholder="Primary Phone (include area code)"  ng-model="registration.primaryPhone">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="cellPhone">Cell Phone</label>
-        <input type="tel" class="form-control" id="cellPhone" placeholder="Cell Phone (include area code)"  ng-model="registration.cellPhone">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="emergencyPhone">Emergency Phone</label>
-        <input type="tel" class="form-control" id="emergencyPhone" placeholder="Emergency Phone (include area code)"  ng-model="registration.emergencyPhone">
-    </div>
-  </div>
-  <!-- email fields -->
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="parentsEmail">Parent's Email</label>
-        <input type="email" class="form-control" id="parentsEmail" placeholder="Parent's Email Address"  ng-model="registration.parentsEmail" >
-    </div>
-  </div>
-  <!-- experience field -->
-  <div class="row">
-    <div class='text-center col-sm-12' >
-        <div class="btn-group" role="group"> Experienced Player / Cheerleader ?
-          <button  type="button" autofocus class="btn btn-default btnGender" id='experienceYes'  ng-click="doYouHaveExpYes()">Yes</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="experienceNo"  ng-click="doYouHaveExpNo()">No</button>
-        </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="yearsOfExperience">Number of Years Experience</label>
-        <input type="number" min="0" max="10" class="form-control" id="yearsOfExperience" placeholder="Number Of Years Experience"  ng-model="registration.yearsOfExperience">
-    </div>
-  </div>
-    <!-- school info -->
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="schoolAttending">School Attending Fall {{ date | date: "yyyy"}} </label>
-        <input type="text" class="form-control" id="schoolAttending" placeholder="School Attending Fall {{ date | date: 'yyyy'}}"  ng-model="registration.schoolAttending" >
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="gradeForFall">Grade For Fall {{ date | date: "yyyy"}} </label>
-        <input type="text"  class="form-control" id="gradeForFall" placeholder="Grade For Fall {{ date | date: 'yyyy'}}"  ng-model="registration.gradeForFall">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="lastTeamPlayedFor">What Team / Coach Did You Play / Cheer For Last Year</label>
-        <input type="text"  class="form-control" id="lastTeamPlayedFor" placeholder="What Team/Coach Were You With Last Year" ng-model="registration.lastTeamPlayedFor" >
-    </div>
-  </div>
-  <!-- Parents info and whom the child lives with -->
-  <h1 class="text-center"><em>It <strong>is</strong> necessary to fill out the info for the parent the child does <strong>not</strong> live with.</em></h1>
-  <div class="row">
-    <div class='text-center col-sm-12' >
-      <h2>Child Lives With</h2>
-        <div class="btn-group" role="group">
-          <button  type="button" autofocus class="btn btn-default btnGender" id='livingWithMom'  ng-click="livesWithMom()">Mother</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="livingWithDad"  ng-click="livesWithDad()">Father</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="livingWithBoth"  ng-click="livesWithBothParents()">Both Parents</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default btnGender" id="livingWithGuardian"  ng-click="livesWithGuardian()">Legal Guardian</button>
-        </div>
-    </div>
-  </div>
-  <!-- Mother'  Info -->
-  <div class="row">
-    <div class="col-sm-12">
-      <h2 class="text-center">Mother's Information</h2>
-      <label class="sr-only" for="mothersName">Mother's Name</label>
-        <input type="text"  class="form-control" id="mothersName" placeholder="Mother's Name"  ng-model="registration.mothersName">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="mothersAddress">Mother's Address</label>
-        <input type="text"  class="form-control" id="mothersAddress" placeholder="Mother's Address"  ng-model="registration.mothersAddress">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="mothersCity">Mother's City</label>
-        <input type="text"  class="form-control" id="mothersCity" placeholder="Mother's City"   ng-model="registration.mothersCity">
-    </div>
-  </div>
-   <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="mothersState">Mother's State</label>
-        <select name="state" class="form-control" id="mothersState" ng-model="registration.mothersState">
-            <option value="AL">AL</option>
-            <option value="AK">AK</option>
-            <option value="AZ">AZ</option>
-            <option value="AR">AR</option>
-            <option value="CA">CA</option>
-            <option value="CO">CO</option>
-            <option value="CT">CT</option>
-            <option value="DE">DE</option>
-            <option value="DC">DC</option>
-            <option value="FL">FL</option>
-            <option value="GA">GA</option>
-            <option value="HI">HI</option>
-            <option value="ID">ID</option>
-            <option value="IL">IL</option>
-            <option value="IN">IN</option>
-            <option value="IA">IA</option>
-            <option value="KS">KS</option>
-            <option value="KY">KY</option>
-            <option value="LA">LA</option>
-            <option value="ME">ME</option>
-            <option value="MD">MD</option>
-            <option value="MA">MA</option>
-            <option value="MI">MI</option>
-            <option value="MN">MN</option>
-            <option value="MS">MS</option>
-            <option value="MO">MO</option>
-            <option value="MT">MT</option>
-            <option value="NE">NE</option>
-            <option value="NV">NV</option>
-            <option value="NH">NH</option>
-            <option value="NJ">NJ</option>
-            <option value="NM">NM</option>
-            <option value="NY">NY</option>
-            <option value="NC">NC</option>
-            <option value="ND">ND</option>
-            <option value="OH">OH</option>
-            <option value="OK">OK</option>
-            <option value="OR">OR</option>
-            <option value="PA">PA</option>
-            <option value="RI">RI</option>
-            <option value="SC">SC</option>
-            <option value="SD">SD</option>
-            <option  value="TN" selected="selected">TN</option>
-            <option value="TX">TX</option>
-            <option value="UT">UT</option>
-            <option value="VT">VT</option>
-            <option value="VA">VA</option>
-            <option value="WA">WA</option>
-            <option value="WV">WV</option>
-            <option value="WI">WI</option>
-            <option value="WY">WY</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="mothersZipCode">Mother's Zip Code</label>
-        <input type="text" minlength='5' maxlength="5" class="form-control" id="mothersZipCode" placeholder="Mother's Zip Code"  ng-model="registration.mothersZipCode">
-    </div>
-    <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="mothersPhone">Mother's Phone</label>
-        <input type="tel" class="form-control" id="mothersPhone" placeholder="Mother's Phone (include area code)"  ng-model="registration.mothersPhone">
-    </div>
-  </div>
-  <!-- Father's Info -->
-  <div class="row">
-    <div class="col-sm-12">
-      <h2 class="text-center">Father's Information</h2>
-      <label class="sr-only" for="fathersName">Father's Name</label>
-        <input type="text"  class="form-control" id="fathersName" placeholder="Father's Name"  ng-model="registration.fathersName">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="fathersAddress">Father's Address</label>
-        <input type="text"  class="form-control" id="fathersAddress" placeholder="Father's Address"  ng-model="registration.fathersAddress">
-    </div>
-  </div>
-   <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="fathersCity">Father's City</label>
-        <input type="text"  class="form-control" id="fathersCity" placeholder="Father's City"   ng-model="registration.fathersCity">
-    </div>
-  </div>
-   <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="fathersState">Father's State</label>
-        <select name="state" class="form-control" id="fathersState" ng-model="registration.fathersState">
-            <option value="AL">AL</option>
-            <option value="AK">AK</option>
-            <option value="AZ">AZ</option>
-            <option value="AR">AR</option>
-            <option value="CA">CA</option>
-            <option value="CO">CO</option>
-            <option value="CT">CT</option>
-            <option value="DE">DE</option>
-            <option value="DC">DC</option>
-            <option value="FL">FL</option>
-            <option value="GA">GA</option>
-            <option value="HI">HI</option>
-            <option value="ID">ID</option>
-            <option value="IL">IL</option>
-            <option value="IN">IN</option>
-            <option value="IA">IA</option>
-            <option value="KS">KS</option>
-            <option value="KY">KY</option>
-            <option value="LA">LA</option>
-            <option value="ME">ME</option>
-            <option value="MD">MD</option>
-            <option value="MA">MA</option>
-            <option value="MI">MI</option>
-            <option value="MN">MN</option>
-            <option value="MS">MS</option>
-            <option value="MO">MO</option>
-            <option value="MT">MT</option>
-            <option value="NE">NE</option>
-            <option value="NV">NV</option>
-            <option value="NH">NH</option>
-            <option value="NJ">NJ</option>
-            <option value="NM">NM</option>
-            <option value="NY">NY</option>
-            <option value="NC">NC</option>
-            <option value="ND">ND</option>
-            <option value="OH">OH</option>
-            <option value="OK">OK</option>
-            <option value="OR">OR</option>
-            <option value="PA">PA</option>
-            <option value="RI">RI</option>
-            <option value="SC">SC</option>
-            <option value="SD">SD</option>
-            <option value="TN" selected="selected">TN</option>
-            <option value="TX">TX</option>
-            <option value="UT">UT</option>
-            <option value="VT">VT</option>
-            <option value="VA">VA</option>
-            <option value="WA">WA</option>
-            <option value="WV">WV</option>
-            <option value="WI">WI</option>
-            <option value="WY">WY</option>
-        </select>
-      </div>
-    </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="fathersZipCode">Father's Zip Code</label>
-        <input type="text" minlength='5' maxlength="5" class="form-control" id="fathersZipCode" placeholder="Father's Zip Code"  ng-model='registration.fathersZipCode'>
-    </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="fathersPhone">Father's Phone</label>
-        <input type="tel" class="form-control" id="fathersPhone" placeholder="Father's Phone (include area code)"  ng-model="registration.fathersPhone">
-    </div>
-  </div>
-  <!-- Guardian's Info -->
-  <div class="row">
-    <div class="col-sm-12">
-      <h2 class="text-center">Guardian's Information</h2>
-      <label class="sr-only" for="guardiansName">Guardian's Name</label>
-        <input type="text"  class="form-control" id="guardiansName" placeholder="Guardian's Name"  ng-model="registration.guardiansName">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="guardiansAddress">Guardian's Address</label>
-        <input type="text"  class="form-control" id="guardiansAddress" placeholder="Guardian's Address"  ng-model="registration.guardiansAddress">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="guardiansCity">Guardian's City</label>
-        <input type="text"  class="form-control" id="guardiansCity" placeholder="Guardian's City"  ng-model="registration.guardiansCity" >
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="guardiansState">Guardian's State</label>
-        <select name="state" class="form-control" id="guardiansState" ng-model="registration.guardianState">
-            <option value="AL">AL</option>
-            <option value="AK">AK</option>
-            <option value="AZ">AZ</option>
-            <option value="AR">AR</option>
-            <option value="CA">CA</option>
-            <option value="CO">CO</option>
-            <option value="CT">CT</option>
-            <option value="DE">DE</option>
-            <option value="DC">DC</option>
-            <option value="FL">FL</option>
-            <option value="GA">GA</option>
-            <option value="HI">HI</option>
-            <option value="ID">ID</option>
-            <option value="IL">IL</option>
-            <option value="IN">IN</option>
-            <option value="IA">IA</option>
-            <option value="KS">KS</option>
-            <option value="KY">KY</option>
-            <option value="LA">LA</option>
-            <option value="ME">ME</option>
-            <option value="MD">MD</option>
-            <option value="MA">MA</option>
-            <option value="MI">MI</option>
-            <option value="MN">MN</option>
-            <option value="MS">MS</option>
-            <option value="MO">MO</option>
-            <option value="MT">MT</option>
-            <option value="NE">NE</option>
-            <option value="NV">NV</option>
-            <option value="NH">NH</option>
-            <option value="NJ">NJ</option>
-            <option value="NM">NM</option>
-            <option value="NY">NY</option>
-            <option value="NC">NC</option>
-            <option value="ND">ND</option>
-            <option value="OH">OH</option>
-            <option value="OK">OK</option>
-            <option value="OR">OR</option>
-            <option value="PA">PA</option>
-            <option value="RI">RI</option>
-            <option value="SC">SC</option>
-            <option value="SD">SD</option>
-            <option value="TN" selected="selected">TN</option>
-            <option value="TX">TX</option>
-            <option value="UT">UT</option>
-            <option value="VT">VT</option>
-            <option value="VA">VA</option>
-            <option value="WA">WA</option>
-            <option value="WV">WV</option>
-            <option value="WI">WI</option>
-            <option value="WY">WY</option>
-        </select>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="guardiansZipCode">Guardian's Zip Code</label>
-        <input type="text" minlength='5' maxlength="5" class="form-control" id="guardiansZipCode" placeholder="Guardian's Zip Code"  ng-model="registration.guardianZipCode">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <label class="sr-only" for="guardiansPhone">Guardian's Phone</label>
-        <input type="tel" class="form-control" id="guardiansPhone" placeholder="Guardian's Phone (include area code)"  ng-model="registration.guardiansPhone">
-    </div>
-  </div>
-  <!-- Medications taken by player  -->
-  <div class="col-sm-12">
-      <label class="sr-only" for="medicationCurrentlyTaken">List Any Medications Currently Being Taken</label>
-        <input type="text" class="form-control" id="medicationCurrentlyTaken" placeholder="List Any Medications Currently Being Taken By Child" ng-model="registration.medicationCurrentlyTaken" >
-  </div>
-    <!-- Medical or Physical Conditions -->
-  <div class="row">
-    <h2 class="text-center"><em>Important Info For The Coaches To Know</em></h2>
-    <div class="col-sm-12">
-        <label class="sr-only" for="medical-allergies">List Any Medical Conditions or Allergies</label>
-          <input type="text" class="form-control" id="medicalAllergies" placeholder="List Any Medical Conditions or Allergies" ng-model="registration.medicalAllergies" >
-    </div>
-  </div>
-  <!-- disclaimers -->
-  <div class="container-fluid waiverBox">
-    <h2 class="text-center">PARENTAL AUTHORIZATION & INDEMNIFICATION</h2>
-    <P> The undersigned parent and/or guardian of the above-named minor, hereby consents to the full participation by the above-named minor in the Tennessee Youth Football Alliance(TYFA) and agree for said minor to be assigned by TYFA or TYFA agents a TYFA team. </P>
-    <p> I acknowledge that the activities that my child will be involved in may be dangerous in nature and I represent that I know and understand those dangers to which my child will be exposed. I specifically acknowledge and understand that football/cheerleading is a sport with risk of serious injury or death.</p>
-    <p> I do hereby voluntarily assume on behaf of the above-named minoreach, every, and all risks and/or hazards to which said minor or myself might be exposed during TYFA activities including, but not limited to, playing said sport, cheerleading and or transportation to and from all activities and medical attention of any nature resulting from injuries sustained in the activities.</p>
-    <p> I do hereby <h3>WAIVE, RELEASE, ABSOLVE AND AGREE TO INDEMNIFY PAY AND HOLD SAFE AND HARMLESS</h3> said football/cheerleading program, it's entire organization, TYFA, the local league/community, their coaches, participants, Board of Directors, all officers, all assistants, persons and/or organizations that transport the participants for any purpose for and from all claims, injuries, damages of both a compensatory and punitive nature and for any and all other claims and/or damages which might arise out of and/or due to the above-named minor's participation in said activities.</p>
-    <p> The parent/guardian whose signature appears below(represented by checking the "Agree To Terms" below) does herby consent to any and all medical treatments including anesthesia and operations which may be deemed necessary by medical care providers attending to the above-named minor for injuries sustained in the activities.</p>
-    <p> I further agree and acknowledge that I am responsible for all charges incurred in connection with the treatment and care rendered to the above-named minor pursuant to this agreement.</p>
-    <p> By agreeing below, I also give this organization, as well as TYFA, permission to use my child's photograph as a participant on either website. <h3>I ACKNOWLEDGE THAT I HAVE FULLY READ THIS COVENANT AND AGREE AND CONSENT TO THESE TERMS AND CONDITIONS.</h3></p>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 text-center">
-      <label>I AGREE</label>
-        <input type="checkbox"  class="form-control" id="agreeToTerms"  ng-model="registration.agreeToTerms" > 
-    </div>
-  </div>
-  <!-- submit the form -->
-  <div class="text-center">
-    <input class="btn btn-default " type="submit" value="Submit" ng-click="edit()">
-  </div>
- 
-<!-- starts edit form -->
-  <div ng-controller="formCtrl">
-  <div class="text-center">
-    {{ registration.childsName }}
-  </div>
-</div>
-
-
-
-    
+  <table class="table">
+    <thead>
+      <th> your profile<th>
       
-
-
-
-
-
-
-
-
-
-
-
-
-  
-</form>
+    </thead>
+     <tbody>
+      <tr> 
+        
+        <td> {{registration.sport}} </td>
+        <td> {{registration.childsName}} </td>
+        <td> {{registration.dateOfBirth}} </td>
+        <td> {{registration.ageOnJuly31}} </td>
+        <td> {{registration.playerStreetAddress}} </td>
+        <td> {{registration.playerCity}} </td>
+        <td> {{registration.zipCode}} </td>
+        <td> {{registration.gender}} </td>
+        <td> {{registration.primaryPhone}} </td>
+        <td> {{registration.cellPhone}} </td>
+        <td> {{registration.emergencyPhone}} </td>
+        <td> {{registration.parentsEmail}} </td>
+        <td> {{registration.experience}} </td>
+        <td> {{registration.yearsOfExperience}} </td>
+        <td> {{registration.schoolAttending}} </td>
+        <td> {{registration.gradeForFall}} </td>
+        <td> {{registration.lastTeamPlayedFor}} </td>
+        <td> {{registration.livesWith}} </td>
+        <td> {{registration.mothersName}} </td>
+        <td> {{registration.mothersAddress}} </td>
+        <td> {{registration.mothersCity}} </td>
+        <td> {{registration.mothersState}} </td>
+        <td> {{registration.mothersZipCode}} </td>
+        <td> {{registration.mothersPhone}} </td>
+        <td> {{registration.fathersName}} </td>
+        <td> {{registration.fathersAddress}} </td>
+        <td> {{registration.fathersCity}} </td>
+        <td> {{registration.fathersState}} </td>
+        <td> {{registration.fathersZipCode}} </td>
+        <td> {{registration.fathersPhone}} </td>
+        <td> {{registration.guardians}} </td>
+        <td> {{registration.guardiansName}} </td>
+        <td> {{registration.guardiansAddress}} </td>
+        <td> {{registration.guardiansCity}} </td>
+        <td> {{registration.guardiansState}} </td>
+        <td> {{registration.guardiansZipCode}} </td>
+        <td> {{registration.guardiansPhone}} </td>
+        <td> {{registration.medicalAllergies}} </td>
+        <td> {{registration.medicationCurrentlyTaken}} </td>
+        <td> {{registration.agree}} </td>
+       <!--  <td>
+          <button ng-click='editProfile()' ng-show='registration'>Edit</button>
+        </td>
+        <td>
+          <button ng-click='deleteProfile()' ng-show='registration'>Remove</button>
+        </td>
+ -->      </tr>
+  </tbody>
+    
+  </table>
