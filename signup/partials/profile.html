@@ -8,68 +8,55 @@
       <h2 class="text-center">  YOU ARE REGISTERED FOR {{ date | date: "yyyy"}} !</h2>
           </div>
     <div class="col-sm-3">
-      <!-- inject current team here--><h1> Your Team :) </h1>
+      <!-- inject current team here--><h1> {{ yourTeam }} </h1>
     </div>
   </div>
 </div>
 <!--Begins main form -->
 
+<div ng-repeat="(key, value) in profiles"></div>
+ 
+<div>        
+         <div ng-model="registration.sport">{{registration.sport}}</div> 
+         <div ng-model="registration.childsName">{{registration.childsName}}</div> 
+         <div ng-model="registration.dateOfBirth">{{registration.dateOfBirth}}</div> 
+         <div ng-model="registration.ageOnJuly31">{{registration.ageOnJuly31}}</div> 
+         <div ng-model="registration.playerStreetAddress">{{registration.playerStreetAddress}}</div> 
+         <div ng-model="registration.playerCity">{{registration.playerCity}}</div> 
+         <div ng-model="registration.zipCode">{{registration.zipCode}}</div> 
+         <div ng-model="registration.gender">{{registration.gender}}</div> 
+         <div ng-model="registration.primaryPhone">{{registration.primaryPhone}}</div> 
+         <div ng-model="registration.cellPhone">{{registration.cellPhone}}</div> 
+         <div ng-model="registration.emergencyPhone">{{registration.emergencyPhone}}</div> 
+         <div ng-model="registration.parentsEmail">{{registration.parentsEmail}}</div> 
+         <div ng-model="registration.experience">{{registration.experience}}</div> 
+         <div ng-model="registration.yearsOfExperience">{{registration.yearsOfExperience}}</div> 
+         <div ng-model="registration.schoolAttending">{{registration.schoolAttending}}</div> 
+         <div ng-model="registration.gradeForFall">{{registration.gradeForFall}}</div> 
+         <div ng-model="registration.lastTeamPlayedFor">{{registration.lastTeamPlayedFor}}</div> 
+         <div ng-model="registration.livesWith">{{registration.livesWith}}</div> 
+         <div ng-model="registration.mothersName">{{registration.mothersName}}</div> 
+         <div ng-model="registration.mothersAddress">{{registration.mothersAddress}}</div> 
+         <div ng-model="registration.mothersCity">{{registration.mothersCity}}</div> 
+         <div ng-model="registration.mothersState">{{registration.mothersState}}</div> 
+         <div ng-model="registration.mothersZipCode">{{registration.mothersZipCode}}</div> 
+         <div ng-model="registration.mothersPhone">{{registration.mothersPhone}}</div> 
+         <div ng-model="registration.fathersName">{{registration.fathersName}}</div> 
+         <div ng-model="registration.fathersAddress">{{registration.fathersAddress}}</div> 
+         <div ng-model="registration.fathersCity">{{registration.fathersCity}}</div> 
+         <div ng-model="registration.fathersState">{{registration.fathersState}}</div> 
+         <div ng-model="registration.fathersZipCode">{{registration.fathersZipCode}}</div> 
+         <div ng-model="registration.fathersPhone">{{registration.fathersPhone}}</div>
+         <div ng-model="registration.guardiansName">{{registration.guardiansName}}</div> 
+         <div ng-model="registration.guardiansAddress">{{registration.guardiansAddress}}</div> 
+         <div ng-model="registration.guardiansCity">{{registration.guardiansCity}}</div> 
+         <div ng-model="registration.guardiansState">{{registration.guardiansState}}</div> 
+         <div ng-model="registration.guardiansZipCode">{{registration.guardiansZipCode}}</div> 
+         <div ng-model="registration.guardiansPhone">{{registration.guardiansPhone}}</div> 
+         <div ng-model="registration.medicalAllergies">{{registration.medicalAllergies}}</div> 
+         <div ng-model="registration.medicationCurrentlyTaken">{{registration.medicationCurrentlyTaken}}</div> 
+         <div ng-model="registration.agree">{{registration.agree}}</div> 
+</div>
 
-  <table class="table">
-    <thead>
-      <th> your profile<th>
-      
-    </thead>
-     <tbody>
-      <tr> 
-        
-        <td> {{registration.sport}} </td>
-        <td> {{registration.childsName}} </td>
-        <td> {{registration.dateOfBirth}} </td>
-        <td> {{registration.ageOnJuly31}} </td>
-        <td> {{registration.playerStreetAddress}} </td>
-        <td> {{registration.playerCity}} </td>
-        <td> {{registration.zipCode}} </td>
-        <td> {{registration.gender}} </td>
-        <td> {{registration.primaryPhone}} </td>
-        <td> {{registration.cellPhone}} </td>
-        <td> {{registration.emergencyPhone}} </td>
-        <td> {{registration.parentsEmail}} </td>
-        <td> {{registration.experience}} </td>
-        <td> {{registration.yearsOfExperience}} </td>
-        <td> {{registration.schoolAttending}} </td>
-        <td> {{registration.gradeForFall}} </td>
-        <td> {{registration.lastTeamPlayedFor}} </td>
-        <td> {{registration.livesWith}} </td>
-        <td> {{registration.mothersName}} </td>
-        <td> {{registration.mothersAddress}} </td>
-        <td> {{registration.mothersCity}} </td>
-        <td> {{registration.mothersState}} </td>
-        <td> {{registration.mothersZipCode}} </td>
-        <td> {{registration.mothersPhone}} </td>
-        <td> {{registration.fathersName}} </td>
-        <td> {{registration.fathersAddress}} </td>
-        <td> {{registration.fathersCity}} </td>
-        <td> {{registration.fathersState}} </td>
-        <td> {{registration.fathersZipCode}} </td>
-        <td> {{registration.fathersPhone}} </td>
-        <td> {{registration.guardians}} </td>
-        <td> {{registration.guardiansName}} </td>
-        <td> {{registration.guardiansAddress}} </td>
-        <td> {{registration.guardiansCity}} </td>
-        <td> {{registration.guardiansState}} </td>
-        <td> {{registration.guardiansZipCode}} </td>
-        <td> {{registration.guardiansPhone}} </td>
-        <td> {{registration.medicalAllergies}} </td>
-        <td> {{registration.medicationCurrentlyTaken}} </td>
-        <td> {{registration.agree}} </td>
-       <!--  <td>
-          <button ng-click='editProfile()' ng-show='registration'>Edit</button>
-        </td>
-        <td>
-          <button ng-click='deleteProfile()' ng-show='registration'>Remove</button>
-        </td>
- -->      </tr>
-  </tbody>
-    
-  </table>
+
+ 

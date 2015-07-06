@@ -42,7 +42,7 @@ var ref = new Firebase("https://sportssignup.firebaseio.com");
   if (authData && isNewUser) {
     // save the user's profile into Firebase so we can list users,
     // use them in Security and Firebase Rules, and show profiles
-    ref.child("users").child(authData.uid).set({
+    ref.child("users").child(authData.uid).update({
       provider: authData.provider,
       name: getName(authData)
     });
@@ -61,7 +61,6 @@ function getName(authData) {
      }
    }
  });
-
 
 
 

@@ -1,9 +1,11 @@
-app.controller('MainController', ['$scope', '$firebaseAuth', '$firebaseArray', '$firebaseObject',  function($scope, $firebaseAuth, $firebaseArray, $firebaseObject, $location, $http){
+app.controller('MainController', function($scope,  $firebaseArray, 
+  $location, $http, $rootScope, $firebaseAuth, Auth) {
   var ref = new Firebase("https://sportssignup.firebaseIO.com");
 
 
   $scope.title = 'Youth Sports Sign Up';
   $scope.date = new Date();
+  $rootScope.yourTeam = "Warriors";
   
 
     // download the data into a local object
@@ -13,4 +15,4 @@ app.controller('MainController', ['$scope', '$firebaseAuth', '$firebaseArray', '
 
 
 
-}]);
+});
