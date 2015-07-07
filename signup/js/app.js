@@ -15,11 +15,18 @@ app.config(['$routeProvider',
         controller: ''})
 
       .when("/profile", {
-        templateUrl: "partials/profile.html", controller: "ProfileCtrl"})
+        templateUrl: "partials/profile.html", controller: "ProfileCtrl", 
+        resolve: {
+              currentAuth: function(Auth) {
+                return Auth.$waitForAuth();
+            }
+          }
+
+      })
 
       .when('/player-registration', {
         templateUrl: 'partials/playerRegistration.html',
-        controller: "FormCtrl",
+        controller: "ProfileCtrl",
 
         resolve: {
               currentAuth: function(Auth) {
