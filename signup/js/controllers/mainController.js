@@ -7,6 +7,7 @@ app.controller('MainController', function($scope,  $firebaseArray,
   $scope.date = new Date();
   $rootScope.yourTeam = "Warriors";
   
+  
 
     // download the data into a local object
  
