@@ -3,7 +3,7 @@ app.controller('MainController', function($scope,  $firebaseArray,
   var ref = new Firebase("https://sportssignup.firebaseIO.com");
 
 
-  $scope.title = 'Youth Sports Sign Up';
+  $scope.title = 'Youth Sports Online Sign Up';
   $scope.date = new Date();
   $rootScope.yourTeam = "Warriors";
   

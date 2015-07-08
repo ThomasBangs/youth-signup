@@ -61,7 +61,7 @@
 
 /*footer*/
 .footerCopy {
-  margin:10px;
+  margin:10px 2.5%;
 }
 /*radio buttons*/
 input[type=radio] {
@@ -112,4 +112,8 @@ nav {
   width:95%;
   margin:0 auto;
 }
- 
+/*style panels*/
+.panel {
+  width:95%;
+  margin:0 auto;
+ }
