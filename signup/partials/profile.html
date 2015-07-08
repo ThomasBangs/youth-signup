@@ -4,60 +4,64 @@
     <div class="col-sm-3">
       <img src="images/tyfa.png" class="img-thumbnail">
     </div>
-    <div class="col-sm-6">
-      <h2 class="text-center">  YOU ARE REGISTERED FOR {{ date | date: "yyyy"}} !</h2>
+    <div class="col-sm-7">
+      <h2 class="text-center">  You have successfully registered {{ profile.childsName }} for the {{ date | date: "yyyy"}} season with the {{ yourTeam }}!</h2>
           </div>
-    <div class="col-sm-3">
-      <!-- inject current team here--><h1> {{ yourTeam }} </h1>
-    </div>
+   
   </div>
 </div>
 
 
 
+<div class="container text-center">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"> Registration Info For: <h3>{{ profile.childsName }}</h3><br /></h3>
+    </div>
+    <div class="panel-body">
+        Player / Cheerleader's Name: <h3>{{ profile.childsName }}</h3> <br />
+        Registered For: <h3>{{ profile.sport }}</h3><br /> 
+        Date of Birth: <h3>{{ profile.dateOfBirth }}</h3><br />
+        Age on July 31, {{ date | date: "yyyy"}}: <h3>{{ profile.ageOnJuly31 }}</h3><br />
+        Child's Address: <h3>{{ profile.playerStreetAddress }}</h3><br />
+        Child's City: <h3>{{ profile.playerCity }}</h3><br />
+        Child's Zip Code: <h3>{{ profile.zipCode }}</h3><br />
+        Gender: <h3>{{ profile.gender }}</h3><br />
+        Primary Phone: <h3>{{ profile.primaryPhone }}</h3><br />
+        Cell Phone: <h3>{{ profile.cellPhone }}</h3><br />
+        Emergency Phone: <h3>{{ profile.emergencyPhone }}</h3><br />
+        Parent's Email: <h3>{{ profile.parentsEmail }}</h3><br />
+        Does The Child Have Experience?: <h3>{{ profile.experience }}</h3><br />
+        Years of Experience: <h3>{{ profile.yearsOfExperience }}</h3><br />
+        School Attending {{ date | date: "yyyy"}}:  <h3>{{ profile.schoolAttending }}</h3><br />
+        Grade for Fall {{ date | date: "yyyy"}}: <h3>{{ profile.gradeForFall }}</h3><br />
+        Last Team Played For: <h3>{{ profile.lastTeamPlayedFor }}</h3><br />
+        Child Lives With: <h3>{{ profile.livesWith }}</h3><br />
+        Mother's Name: <h3>{{ profile.mothersName }}</h3><br />
+        Mother's Address: <h3>{{ profile.mothersAddress }}</h3><br />
+        Mother's City: <h3>{{ profile.mothersCity }}</h3><br />
+        Mpther's State: <h3>{{ profile.mothersState }}</h3><br />
+        Mother' Zip: <h3>{{ profile.mothersZipCode }}</h3><br />
+        Mother's Phone: <h3>{{ profile.mothersPhone }}</h3><br />
+        Father's Name: <h3>{{ profile.fathersName }}</h3><br />
+        Father's Address: <h3>{{ profile.fathersAddress }}</h3><br />
+        Father's City: <h3>{{ profile.fathersCity }}</h3><br />
+        Father's State: <h3>{{ profile.fathersState }}</h3><br />
+        Father's Zip Code: <h3>{{ profile.fathersZipCode }}</h3><br />
+        Father's Phone: <h3>{{ profile.fathersPhone }}</h3><br />
+        Guardian's Name: <h3>{{ profile.guardiansName }}</h3><br />
+        Guardian's Address: <h3>{{ profile.guardiansAddress }}</h3><br />
+        Guardian's City: <h3>{{ profile.guardiansCity }}</h3><br />
+        Guardian's State: <h3>{{ profile.guardiansState }}</h3><br />
+        Guardian's Zip Code: <h3>{{ profile.guardiansZipCode }}</h3><br />
+        Guardian's Phone: <h3>{{ profile.guardiansPhone }}</h3><br />
+        List of Medical Allergies: <h3>{{ profile.medicalAllergies }}</h3><br />
+        Current Medications Being Taken:<h3>{{ profile.medicationCurrentlyTaken }}</h3><br />
+        You Agreed To Terms and Conditions: <h3>{{ profile.agree }}</h3><br />
+    </div>
+  </div>
+</div>
 
-<!--Begins main form -->
-<div>
-         <p>{{ profiles.sport }} </p>
-         <p>{{profiles.childsName}}</p>
-         <p>{{ profiles.dateOfBirth }}</p>
-         <p>{{ profiles.ageOnJuly31 }}</p>
-         <p>{{ profiles.playerStreetAddress }}</p>
-         <p>{{ profiles.playerCity }}</p>
-         <p>{{ profiles.zipCode }}</p>
-         <p>{{ profiles.gender }}</p>
-         <p>{{ profiles.primaryPhone }}</p>
-         <p>{{ profiles.cellPhone }}</p>
-         <p>{{ profiles.emergencyPhone }}</p>
-         <p>{{ profiles.parentsEmail }}</p>
-         <p>{{ profiles.experience }}</p>
-         <p>{{ profiles.yearsOfExperience }}</p>
-         <p>{{ profiles.schoolAttending }}</p>
-         <p>{{ profiles.gradeForFall }}</p>
-         <p>{{ profiles.lastTeamPlayedFor }}</p>
-         <p>{{ profiles.livesWith }}</p>
-         <p>{{ profiles.mothersName }}</p>
-         <p>{{ profiles.mothersAddress }}</p>
-         <p>{{ profiles.mothersCity }}</p>
-         <p>{{ profiles.mothersState }}</p>
-         <p>{{ profiles.mothersZipCode }}</p>
-         <p>{{ profiles.mothersPhone }}</p>
-         <p>{{ profiles.fathersName }}</p>
-         <p>{{ profiles.fathersAddress }}</p>
-         <p>{{ profiles.fathersCity }}</p>
-         <p>{{ profiles.fathersState }}</p>
-         <p>{{ profiles.fathersZipCode }}</p>
-         <p>{{ profiles.fathersPhone }}</p>
-         <p>{{ profiles.guardiansName }}</p>
-         <p>{{ profiles.guardiansAddress }}</p>
-         <p>{{ profiles.guardiansCity }}</p>
-         <p>{{ profiles.guardiansState }}</p>
-         <p>{{ profiles.guardiansZipCode }}</p>
-         <p>{{ profiles.guardiansPhone }}</p>
-         <p>{{ profiles.medicalAllergies }}</p>
-         <p>{{ profiles.medicationCurrentlyTaken }}</p>
-         <p>{{ profiles.agree }}</p>
- </div>
  
        
          

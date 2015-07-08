@@ -1,11 +1,24 @@
-<div class="jumbotron" ng-controller="AuthCtrl">
-  <div class = "panel text-center" ng-hide="authData" >
+<div class="container-fluid" ng-controller="AuthCtrl">
+  <div class="jumbotron">
+    <h2>Making life simpler...</h2>
+      <div class="col-"></div>
+      <p>Every season we get excited to be a part of another fun filled experience of watching our young ones participate in the sports they love.</p>
+      <p>Along with that comes driving to the field during certain times and standing in line to get signed up. 
+      </p>
+      <p>Now, at your convenience you can sign up online from your computer, your tablet or your phone 24 hours a day!</p>
+      <p>Just login and sign up, it's that easy.</p>
+      
+      
+      
+       
+       <!-- display Facebook user info after login -->
+    <div class = "panel text-center" ng-hide="authData" >
       <button class="btn btn-default" ng-click="login()">Login With Facebook</button>
-  </div>
-
-  <div class = "panel text-center" ng-show="authData">
-    <img ng-src="{{ authData.facebook.cachedUserProfile.picture.data.url }}" />
-    <p> Welcome {{ authData.facebook.displayName }} </p>
+    </div>
+    <div class = "panel text-center" ng-show="authData">
+      <img  ng-src="{{ authData.facebook.cachedUserProfile.picture.data.url }}" />
+      <p> <h2>Welcome</h2><h3> {{ authData.facebook.displayName }} </h3> </p>
       <button class="btn btn-default" ng-click="logout()">logout</button>
+    </div>
   </div>
 </div>
